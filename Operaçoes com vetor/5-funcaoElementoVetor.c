@@ -8,7 +8,7 @@ void mostrarConteudo(int* vetNum, int numEl) {
     }
 }
 
-int somaNumero(int* vetNum, int numEl) {
+int somarNumero(int* vetNum, int numEl) {
    
     int i, soma;
     for (i = 0; i < numEl; i++) {
@@ -17,7 +17,7 @@ int somaNumero(int* vetNum, int numEl) {
     return soma;
 }
 
-int encontraMaior(int* vetNum, int numEl) {
+int encontrarMaior(int* vetNum, int numEl) {
     
     int i, maior;
 
@@ -31,7 +31,7 @@ int encontraMaior(int* vetNum, int numEl) {
     return maior;
 }
 
-int encontraPosicaoMaior(int* vetNum, int numEl) {
+int encontrarPosicaoMaior(int* vetNum, int numEl) {
    
     int i, maior, posicaoMaior=0;
     
@@ -43,7 +43,7 @@ int encontraPosicaoMaior(int* vetNum, int numEl) {
     return posicaoMaior;
 }
 
-int encontraMenor(int* vetNum, int numEl) {
+int encontrarMenor(int* vetNum, int numEl) {
     
     int i, menor;
 
@@ -56,7 +56,7 @@ int encontraMenor(int* vetNum, int numEl) {
     return menor;
 }
 
-int encontraPosicaoMenor(int* vetNum, int numEl) {
+int encontrarPosicaoMenor(int* vetNum, int numEl) {
     
     int i, menor, posicaoMenor=0;
 
@@ -84,15 +84,15 @@ int main() {
 
     mostrarConteudo(vetNum, numEl);
 
-    printf("\nSoma dos valores do vetor: %i\n\n", somaNumero(vetNum, numEl));
+    printf("\nSoma dos valores do vetor: %i\n\n", somarNumero(vetNum, numEl));
 
-    printf("Maior valor: %i\n", encontraMaior(vetNum, numEl));
+    printf("Maior valor: %i\n", encontrarMaior(vetNum, numEl));
  
-    printf("Posicao do maior: [%i]\n\n", encontraMaior(vetNum, numEl));
+    printf("Posicao do maior: [%i]\n\n", encontrarMaior(vetNum, numEl));
 
-    printf("Menor valor: %i\n", encontraMenor(vetNum, numEl));
+    printf("Menor valor: %i\n", encontrarMenor(vetNum, numEl));
     
-    printf("Posicao do menor: [%i]\n", encontraPosicaoMenor(vetNum, numEl));
+    printf("Posicao do menor: [%i]\n", encontrarPosicaoMenor(vetNum, numEl));
 
     return 0;
 }
