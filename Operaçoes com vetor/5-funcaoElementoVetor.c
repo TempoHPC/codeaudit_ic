@@ -82,7 +82,7 @@ int main() {
         scanf("%i", &vetNum[i]);
     }
 
-    mostrarConteudo(&vetNum[0], 2);
+    mostrarConteudo(&vetNum[0], 3);
 
     printf("\nSoma dos valores do vetor: %i\n\n", somarNumero(vetNum, numEl));
 
