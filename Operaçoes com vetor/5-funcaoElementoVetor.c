@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void mostrarConteudo(int* vetNum, int numEl) {
     int i;
     for (i = 0; i < numEl; i++) {
-        printf("%i ", vetNum[i]);
+        printf("%i, ", vetNum[i]);
     }
 }
 
@@ -63,7 +64,10 @@ int main() {
     printf("Digite a quantidade de elementos:\n");
     scanf("%i", &numEl);
 
-    int vetNum[numEl];
+    //int vetNum[numEl];
+    int *vetNum;
+
+    vetNum=(int*) malloc(numEl*sizeof(int));
 
     printf("Digite os elementos:\n");
     for (i = 0; i < numEl; i++) {

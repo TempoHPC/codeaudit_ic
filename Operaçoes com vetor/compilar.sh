@@ -1,1 +1,1 @@
-gcc 5-funcaoElementoVetor.c -o 5-funcaoElemtnoVetor  #modifricado por Bidu
+gcc 5-funcaoElementoVetor.c -o 5-funcaoElementoVetor  #modifricado por Bidu
