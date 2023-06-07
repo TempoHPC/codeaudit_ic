@@ -64,7 +64,7 @@ int main() {
     printf("Digite a quantidade de elementos:\n");
     scanf("%i", &numEl);
 
-    //int vetNum[numEl]
+    /*int vetNum[numEl]*/
     int *vetNum;
     vetNum=(int*) malloc(numEl*sizeof(int));
 
