@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void mostrarConteudo(int* vetNum, int numEl) {
     int i;
     for (i = 0; i < numEl; i++) {
-        printf("%i ", vetNum[i]);
+        printf("%i, ", vetNum[i]);
     }
 }
 
