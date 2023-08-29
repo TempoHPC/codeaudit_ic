@@ -53,7 +53,7 @@ module ManipulacaoVet
         
     end function encontraMaior
 
-    function encontraPosicaoMaior(vetNumPma, numElPma) result(posicaoMaior)
+    integer function encontraPosicaoMaior(vetNumPma, numElPma) 
         
         integer, intent(in) :: vetNumPma(:), numElPma
         integer :: i, maior, posicaoMaior, inicioPMa=1, fimPMa
@@ -68,6 +68,7 @@ module ManipulacaoVet
                 posicaoMaior = i
             end if
         end do
+        encontraPosicaoMaior=posicaoMaior
         
     end function encontraPosicaoMaior
     
@@ -93,7 +94,7 @@ module ManipulacaoVet
         
     end function encontraMenor
 
-    function encontraPosicaoMenor(vetNumPme, numElPme) result(posicaoMenor)
+    integer function encontraPosicaoMenor(vetNumPme, numElPme) 
         
         integer, intent(in) :: vetNumPme(:), numElPme
         integer :: i, menor, posicaoMenor, inicioPMe=1, fimPMe
@@ -108,7 +109,7 @@ module ManipulacaoVet
                 posicaoMenor = i
             end if
         end do
-        
+        encontraPosicaoMenor=posicaoMenor
     end function encontraPosicaoMenor
 
 end module ManipulacaoVet
@@ -117,8 +118,9 @@ program ManipulacaoVetor
     use ManipulacaoVet
     implicit none
     
-    integer :: i, numEl, inicio=1, fim
+    integer :: i, numEl, inicio=1, fim, pos=0
     integer, allocatable :: vetNum(:)
+    character::resposta
     
     print *, "Digite a quantidade de elementos:"
     read *, numEl
@@ -132,52 +134,58 @@ program ManipulacaoVetor
     
     fim = numEl
     
-    call mostrarConteudo(vetNum, numEl)
+    print *, "Deseja fazer as operações com todos os valores? (S/N)"
+    read *, resposta
     
-    print *, "Soma dos valores do vetor:", somaNumero(vetNum, numEl)
-    
-    print *, "Maior valor:", encontraMaior(vetNum, numEl)
-    
-    print *, "Posicao do maior: [", encontraPosicaoMaior(vetNum, numEl), "]"
-    
-    print *, "Menor valor:", encontraMenor(vetNum, numEl)
-    
-    print *, "Posicao do menor: [", encontraPosicaoMenor(vetNum, numEl), "]"
+	if(resposta == "S") then 
+	
+	    call mostrarConteudo(vetNum, numEl)
 
-    print *, "-----------------------------------------------"
-    
-    ! MESMO RESULTADO DE OUTRA FORMA 
-    
-    call mostrarConteudo(vetNum(inicio:), fim - inicio + 1)
-    
-    print *, "Soma dos valores do vetor:", somaNumero(vetNum(inicio:), fim - inicio + 1)
-    
-    print *, "Maior valor:", encontraMaior(vetNum(inicio:), fim - inicio + 1)
-    
-    print *, "Posicao do maior: [", encontraPosicaoMaior(vetNum(inicio:), fim - inicio + 1), "]"
-    
-    print *, "Menor valor:", encontraMenor(vetNum(inicio:), fim - inicio + 1)
-    
-    print *, "Posicao do menor: [", encontraPosicaoMenor(vetNum(inicio:), fim - inicio + 1), "]"
-    
-    print *, "-----------------------------------------------"
-    
-    ! AGORA COM UMA PARTE DO VETOR
+	   
+	    print *, "Soma dos valores do vetor:", somaNumero(vetNum, numEl)
+	    
+	    print *, "Maior valor:", encontraMaior(vetNum, numEl)
+	    
+	    print *, "Posicao do maior: [", encontraPosicaoMaior(vetNum, numEl), "]"
+	    
+	    print *, "Menor valor:", encontraMenor(vetNum, numEl)
+	    
+	    print *, "Posicao do menor: [", encontraPosicaoMenor(vetNum, numEl), "]"
 
-    inicio = 1
-    fim = 6
-    print *, " operações com um subvetor, inicio=1, fim=6"
-    
-    call mostrarConteudo(vetNum(inicio:), fim - inicio + 1)
-    
-    print *, "Soma dos valores do vetor:", somaNumero(vetNum(inicio:fim), fim - inicio + 1)
-    
-    print *, "Maior valor:", encontraMaior(vetNum(inicio:fim), fim - inicio + 1)
+    else
+	    
+     print *, "Quantos elementos deseja nas operações:"
+	    read *, fim
+	    
+	    print *, "Partindo de qual posicao?"
+	    read *, inicio
 
-    print *, "Posicao do maior: [", encontraPosicaoMaior(vetNum(inicio:), fim - inicio + 1), "]"
-    
-    print *, "Menor valor:", encontraMenor(vetNum(inicio:fim), fim - inicio + 1)
-   
-    print *, "Posicao do menor: [", encontraPosicaoMenor(vetNum(inicio:), fim - inicio + 1), "]"
+	    call mostrarConteudo(vetNum(inicio:), fim )
+	    
+	    print *, "Soma dos valores do vetor:", somaNumero(vetNum(inicio:), fim )
+	    
+	    print *, "Maior valor:", encontraMaior(vetNum(inicio:fim), fim)
+
+	    print *, "Posicao do maior: [", encontraPosicaoMaior(vetNum(inicio:), fim ), "]"
+	    
+	    print *, "Menor valor:", encontraMenor(vetNum(inicio:), fim )
+	   
+	    print *, "Posicao do menor: [", encontraPosicaoMenor(vetNum(inicio:), fim ), "]"
+	
+ end if
 
 end program ManipulacaoVetor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
