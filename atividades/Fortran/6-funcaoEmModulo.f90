@@ -118,7 +118,7 @@ program ManipulacaoVetor
     use ManipulacaoVet
     implicit none
     
-    integer :: i, numEl, inicio=1, fim, pos=0
+    integer :: i, numEl, p_inicio=1, fim, pos=0, p_final
     integer, allocatable :: vetNum(:)
     character::resposta
     
@@ -128,7 +128,7 @@ program ManipulacaoVetor
     allocate(vetNum(numEl))
     
     print *, "Digite os elementos:"
-    do i = inicio, numEl
+    do i = p_inicio, numEl
         read *, vetNum(i)
     end do
     
@@ -137,7 +137,7 @@ program ManipulacaoVetor
     print *, "Deseja fazer as operações com todos os valores? (S/N)"
     read *, resposta
     
-	if(resposta == "S") then 
+	if(resposta == "S" .or. resposta == "s" ) then 
 	
 	    call mostrarConteudo(vetNum, numEl)
 
@@ -158,19 +158,25 @@ program ManipulacaoVetor
 	    read *, fim
 	    
 	    print *, "Partindo de qual posicao?"
-	    read *, inicio
+	    read *, p_inicio
+     
+        print *, "Até?"
+	    read *, p_final
+     
+        call mostrarConteudo(vetNum, numEl)
+        print *, "------------------------------------------------------------"
+	    call mostrarConteudo(vetNum(p_inicio:p_final), fim )
+	    
+	    print *, "Soma dos valores do vetor:", somaNumero(vetNum(p_inicio:p_final), fim )
+     
+	    
+	    print *, "Maior valor:", encontraMaior(vetNum(p_inicio:p_final), fim)
 
-	    call mostrarConteudo(vetNum(inicio:), fim )
+	    print *, "Posicao do maior: [", encontraPosicaoMaior(vetNum(p_inicio:p_final), fim ), "]"
 	    
-	    print *, "Soma dos valores do vetor:", somaNumero(vetNum(inicio:), fim )
-	    
-	    print *, "Maior valor:", encontraMaior(vetNum(inicio:fim), fim)
-
-	    print *, "Posicao do maior: [", encontraPosicaoMaior(vetNum(inicio:), fim ), "]"
-	    
-	    print *, "Menor valor:", encontraMenor(vetNum(inicio:), fim )
+	    print *, "Menor valor:", encontraMenor(vetNum(p_inicio:p_final), fim )
 	   
-	    print *, "Posicao do menor: [", encontraPosicaoMenor(vetNum(inicio:), fim ), "]"
+	    print *, "Posicao do menor: [", encontraPosicaoMenor(vetNum(p_inicio:p_final), fim ), "]"
 	
  end if
 
