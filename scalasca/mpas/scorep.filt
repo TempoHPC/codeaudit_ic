@@ -1,0 +1,8 @@
+SCOREP_REGION_NAMES_BEGIN
+  EXCLUDE
+    mcica_subcol_gen_lw::kissvec
+    cu_ntiedtke::foealfa
+    mpas_convective_diagnostics::getqvs
+    mpas_convective_diagnostics::getqvi
+    mcica_subcol_gen_sw::kissvec
+SCOREP_REGION_NAMES_END
