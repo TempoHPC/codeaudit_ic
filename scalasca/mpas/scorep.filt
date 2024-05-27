@@ -5,4 +5,14 @@ SCOREP_REGION_NAMES_BEGIN
     mpas_convective_diagnostics::getqvs
     mpas_convective_diagnostics::getqvi
     mcica_subcol_gen_sw::kissvec
+    cu_ntiedtke::foeewm
+    cu_ntiedtke::foeldcpm
+    cu_ntiedtke::foedem
+    comp_search_0
+    cu_ntiedtke::foelhm
+    comp_sort_0
+    comp_sort_2
+    rrtmg_sw_reftra::reftra_sw
+    rrtmg_sw_vrtqdr::vrtqdr_sw
+    mpas_sort::mpas_binary_search
 SCOREP_REGION_NAMES_END

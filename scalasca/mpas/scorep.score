@@ -1,0 +1,1179 @@
+
+Estimated aggregate size of event trace:                   106GB
+Estimated requirements for largest trace buffer (max_buf): 9GB
+Estimated memory requirements (SCOREP_TOTAL_MEMORY):       9GB
+(warning: The memory requirements cannot be satisfied by Score-P to avoid
+ intermediate flushes when tracing. Set SCOREP_TOTAL_MEMORY=4G to get the
+ maximum supported memory or reduce requirements using USR regions filters.)
+
+flt     type    max_buf[B]        visits  time[s] time[%] time/visit[us]  region
+         ALL 8,633,061,965 4,372,706,546 12910.71   100.0           2.95  ALL
+         USR 8,623,061,876 4,367,872,963  9661.96    74.8           2.21  USR
+         MPI     4,848,071     1,089,250  2893.53    22.4        2656.44  MPI
+         COM     3,278,626     1,991,123   333.09     2.6         167.29  COM
+         OMP     3,056,974     1,753,194    21.96     0.2          12.53  OMP
+      SCOREP            41            16     0.17     0.0       10587.49  SCOREP
+
+         USR 1,688,285,040 1,032,243,740  1057.37     8.2           1.02  mcica_subcol_gen_lw::kissvec
+         USR 1,642,676,698   904,543,390   927.49     7.2           1.03  cu_ntiedtke::foealfa
+         USR 1,343,005,534   615,748,638   649.19     5.0           1.05  mpas_convective_diagnostics::getqvs
+         USR 1,331,832,190   608,867,022   632.91     4.9           1.04  mpas_convective_diagnostics::getqvi
+         USR 1,276,284,880   392,313,555   403.53     3.1           1.03  mcica_subcol_gen_sw::kissvec
+         USR   378,002,222   221,087,764   466.82     3.6           2.11  cu_ntiedtke::foeewm
+         USR   344,418,152   193,094,172   395.88     3.1           2.05  cu_ntiedtke::foeldcpm
+         USR   236,385,708   136,510,500   283.46     2.2           2.08  cu_ntiedtke::foedem
+         USR   198,086,980     7,618,730     7.66     0.1           1.01  comp_search_0
+         USR   193,872,016   110,625,048   227.85     1.8           2.06  cu_ntiedtke::foelhm
+         USR   130,059,488     5,002,288     5.03     0.0           1.01  comp_sort_0
+         USR   108,386,564     6,979,604     7.01     0.1           1.00  comp_sort_2
+         USR    44,774,912    13,763,232    28.05     0.2           2.04  rrtmg_sw_reftra::reftra_sw
+         USR    44,774,912    13,763,232    47.37     0.4           3.44  rrtmg_sw_vrtqdr::vrtqdr_sw
+         USR    27,093,846    15,700,978    16.61     0.1           1.06  mpas_sort::mpas_binary_search
+         USR    12,779,624     4,177,924    12.14     0.1           2.91  search_triplet_array
+         USR    12,717,926     6,606,885     7.55     0.1           1.14  mpas_convective_diagnostics::getthe
+         USR    10,452,858     4,192,814    12.55     0.1           2.99  mp_wsm6::slope_snow
+         USR    10,452,858     4,192,814     6.58     0.1           1.57  mp_wsm6::slope_graup
+         USR     9,627,462     5,851,134     6.07     0.0           1.04  mpas_hash::mpas_hash_search
+         USR     9,367,696     5,763,501     6.39     0.0           1.11  mpas_c_interfacing::mpas_f_to_c_string
+         USR     7,495,488     4,587,744     4.78     0.0           1.04  mpas_atmphys_functions::rslf
+         USR     7,162,116     3,273,674     3.40     0.0           1.04  mpas_atmphys_functions::rsif
+         USR     5,510,232     1,489,812     1.84     0.0           1.24  module_sf_noahlsm::wdfcnd
+         USR     5,427,890     1,430,162     2.02     0.0           1.41  module_sf_noahlsm::tdfcnd
+         USR     4,554,056     2,802,496    19.56     0.2           6.98  check_regex_match
+         USR     4,530,240     1,214,640     1.28     0.0           1.06  module_sf_noahlsm::tbnd
+         USR     4,077,112     2,463,924     2.62     0.0           1.06  mpas_hash::mpas_hash_insert
+         USR     3,962,712     2,437,357     7.61     0.1           3.12  mpas_pool_routines::pool_hash
+         USR     3,962,712     2,437,357     2.52     0.0           1.04  c_pool_hash
+         USR     3,903,614     2,399,344     2.58     0.0           1.08  mpas_threading::mpas_threading_get_thread_num
+         USR     3,812,848     2,345,133     5.52     0.0           2.35  mpas_pool_routines::pool_get_member
+         USR     3,635,086       986,680     1.03     0.0           1.04  module_sf_noahlsm::tmpavg
+         USR     3,577,262     1,600,381     2.95     0.0           1.84  mp_wsm6::slope_rain
+         USR     3,195,036       122,886     0.13     0.0           1.10  mpas_block_decomp::mpas_get_owning_proc
+         USR     2,750,800       592,300     1.27     0.0           2.15  mp_radar::get_m_mix
+         USR     2,750,800       592,300     0.78     0.0           1.32  mp_radar::m_complex_maxwellgarnett
+         USR     2,522,598       754,593     0.80     0.0           1.06  module_sf_noahlsm::rosr12
+         USR     2,476,188     1,515,594     1.64     0.0           1.08  mpas_convective_diagnostics::integral_zstaggered
+         USR     2,101,138       215,599     0.28     0.0           1.28  module_sf_noahlsm::frh2o
+         USR     2,007,720     1,228,860     1.57     0.0           1.28  bl_ysu::get_pblh
+         USR     1,979,900       193,365     0.40     0.0           2.09  module_sf_noahlsm::snksrc
+         USR     1,806,766     1,105,890     1.12     0.0           1.01  mpas_rbf_interpolation::evaluate_rbf
+         USR     1,522,560       137,904     0.16     0.0           1.16  module_sf_noah_seaice::csnow
+         MPI     1,490,038       219,973     0.98     0.0           4.44  MPI_Isend
+         USR     1,463,046       900,048     1.95     0.0           2.16  mpas_pool_routines::mpas_pool_get_field_2d_real
+         USR     1,444,326       888,816     1.98     0.0           2.23  mpas_pool_routines::mpas_pool_get_array_2d_real
+         MPI     1,378,343       219,973     0.78     0.0           3.54  MPI_Irecv
+         USR     1,377,896       145,413     0.17     0.0           1.19  module_sf_noahlsm::csnow
+         USR     1,375,400       296,150     0.68     0.0           2.29  mp_radar::rayleigh_soak_wetgraupel
+         USR     1,375,400       296,150     0.94     0.0           3.18  mp_radar::get_m_mix_nested
+         MPI     1,285,064       302,368   217.53     1.7         719.41  MPI_Bcast
+         USR     1,281,540       375,120     0.82     0.0           2.18  module_sf_noahlsm::hstep
+         USR     1,247,792        74,918     0.09     0.0           1.16  module_sf_noahlsm_glacial_only::csnow
+         USR     1,226,602       339,363     1.95     0.0           5.74  module_sf_noahlsm::srt
+         USR     1,226,602       339,363     0.75     0.0           2.20  module_sf_noahlsm::sstep
+         USR     1,204,632       737,316     0.79     0.0           1.07  mpas_convective_diagnostics::column_height_value
+         USR     1,172,444       721,504     1.51     0.0           2.09  mpas_pool_routines::mpas_pool_set_error_level
+         USR     1,132,560       303,660     2.46     0.0           8.10  module_sf_noahlsm::sflx
+         USR     1,132,560       303,660     0.36     0.0           1.17  module_sf_noahlsm::redprm
+         USR     1,132,560       303,660     0.34     0.0           1.11  module_sf_noahlsm::penman
+         USR     1,132,560       303,660     1.48     0.0           4.88  module_sf_noahlsm::smflx
+         USR     1,132,560       303,660     0.33     0.0           1.07  module_sf_noahlsm::fac2mit
+         USR     1,132,560       303,660     1.03     0.0           3.38  module_sf_noahlsm::shflx
+         USR     1,132,560       303,660     3.79     0.0          12.47  module_sf_noahlsm::hrt
+         USR     1,062,178       215,522     1.14     0.0           5.27  module_sf_noahlsm::nopac
+         USR     1,011,192       228,395     0.68     0.0           2.97  module_sf_noahlsm::evapo
+         USR     1,011,192       228,395     0.24     0.0           1.06  module_sf_noahlsm::devap
+         USR       957,840       258,930     0.32     0.0           1.25  module_sf_noahlsm::canres
+         USR       850,876       523,616     7.50     0.1          14.32  mpas_stream_list::mpas_stream_list_query
+         USR       847,730       186,278     0.21     0.0           1.12  module_sf_noahlsm::transp
+         USR       813,072        88,138     0.10     0.0           1.12  module_sf_noahlsm::snfrac
+         USR       813,072        88,138     0.10     0.0           1.15  module_sf_noahlsm::alcalc
+         USR       813,072        88,138     0.44     0.0           4.99  module_sf_noahlsm::snopac
+         USR       812,838        88,032     0.10     0.0           1.11  module_sf_noahlsm::snowpack
+         USR       810,576        87,816     0.09     0.0           1.07  module_sf_noahlsm::snowz0
+         USR       787,020        71,460     0.52     0.0           7.21  module_sf_noah_seaice::sflx_seaice
+         USR       787,020        71,460     0.08     0.0           1.06  module_sf_noah_seaice::snowz0
+         USR       787,020        71,460     0.08     0.0           1.06  module_sf_noah_seaice::penman
+         USR       787,020        71,460     0.22     0.0           3.01  module_sf_noah_seaice::snopac
+         USR       787,020        71,460     0.24     0.0           3.35  module_sf_noah_seaice::shflx
+         USR       787,020        71,460     0.08     0.0           1.06  module_sf_noah_seaice::hrtice
+         USR       760,604        62,370     0.07     0.0           1.08  module_sf_noah_seaice::snowpack
+         USR       758,888       467,008     0.48     0.0           1.03  esmf_basetimemod::seccmp
+         USR       735,540        66,444     0.07     0.0           1.11  module_sf_noah_seaice::snow_new
+         OMP       700,752       431,232     0.47     0.0           1.08  !$omp barrier @mpas_pool_routines.F:5454
+         OMP       700,752       431,232     0.46     0.0           1.08  !$omp barrier @mpas_pool_routines.F:5478
+         COM       700,752       431,232     1.92     0.0           4.46  mpas_pool_routines::mpas_pool_get_next_member
+         COM       680,472       418,752     1.31     0.0           3.13  mpas_stream_manager::mpas_stream_mgr_get_next_stream
+         USR       664,560        40,110     0.33     0.0           8.10  module_sf_noahlsm_glacial_only::sflx_glacial
+         USR       664,560        40,110     0.04     0.0           1.08  module_sf_noahlsm_glacial_only::alcalc
+         USR       664,560        40,110     0.04     0.0           1.04  module_sf_noahlsm_glacial_only::snowz0
+         USR       664,560        40,110     0.04     0.0           1.05  module_sf_noahlsm_glacial_only::penman
+         USR       664,560        40,110     0.12     0.0           3.07  module_sf_noahlsm_glacial_only::snopac
+         USR       664,560        40,110     0.13     0.0           3.35  module_sf_noahlsm_glacial_only::shflx
+         USR       664,560        40,110     0.04     0.0           1.06  module_sf_noahlsm_glacial_only::hrtice
+         USR       664,560        40,110     0.09     0.0           2.16  module_sf_noahlsm_glacial_only::hstep
+         USR       636,272        37,885     0.04     0.0           1.08  module_sf_noahlsm_glacial_only::snowpack
+         USR       625,560       384,945     1.29     0.0           3.36  mpas_pool_routines::mpas_pool_get_config_char
+         OMP       599,508       368,928     0.39     0.0           1.06  !$omp barrier @mpas_stream_manager.F:5643
+         USR       587,834       361,744     0.76     0.0           2.10  mpas_pool_routines::pool_mesg
+         USR       586,222       360,752     0.38     0.0           1.06  mpas_pool_routines::mpas_pool_get_error_level
+         USR       584,532       359,064     0.77     0.0           2.14  mpas_pool_routines::mpas_pool_get_field_1d_real
+         USR       583,232        34,808     0.04     0.0           1.05  module_sf_noahlsm_glacial_only::snow_new
+         USR       581,672        57,742     0.07     0.0           1.14  module_sf_noahlsm::snow_new
+         COM       558,740       343,840     2.61     0.0           7.60  mpas_stream_manager::mpas_stream_mgr_get_next_field
+         USR       547,976       337,216     0.74     0.0           2.21  mpas_pool_routines::mpas_pool_get_array_1d_real
+         USR       488,254       226,668   582.74     4.5        2570.89  cu_ntiedtke::cuadjtqn
+         USR       477,230       287,280     0.29     0.0           1.02  mpas_vector_operations::mpas_unit_vec_in_r3
+         USR       401,544       245,772     0.27     0.0           1.10  mpas_convective_diagnostics::integral_zpoint
+         USR       399,880       184,377     0.59     0.0           3.21  module_ra_rrtmg_vinterp::vinterp_ozn
+         USR       399,802       184,329     0.51     0.0           2.75  module_ra_rrtmg_lw::inirad
+         USR       399,802       184,329     0.64     0.0           3.45  module_ra_rrtmg_lw::o3data
+         USR       399,802       184,329     0.27     0.0           1.49  module_ra_rrtmg_lw::relcalc
+         USR       399,802       184,329     0.23     0.0           1.27  module_ra_rrtmg_lw::reicalc
+         MPI       360,672       194,208  1300.63    10.1        6697.12  MPI_Waitany
+         OMP       359,034       190,200     0.23     0.0           1.22  !$omp barrier @mpas_threading.F:132
+         COM       359,034       190,200     0.44     0.0           2.32  mpas_threading::mpas_threading_barrier
+         USR       352,014       216,624     0.49     0.0           2.24  mpas_pool_routines::mpas_pool_get_dimension_0d
+         USR       331,084       203,744     0.42     0.0           2.08  esmf_basetimemod::esmf_basetimelt
+         USR       331,084       203,744     0.42     0.0           2.06  esmf_basetimemod::esmf_basetimege
+         USR       306,748       188,768     0.20     0.0           1.07  esmf_basetimemod::normalize_basetime
+         USR       263,614       162,224     0.58     0.0           3.55  mpas_stream_manager::mpas_stream_mgr_ringing_alarms
+         USR       262,080       161,280     0.30     0.0           1.86  module_libmassv::vrec_s
+         USR       262,080       161,280     0.26     0.0           1.64  module_libmassv::vsqrt_s
+         USR       215,618       132,688     0.14     0.0           1.04  esmf_calendarmod::isleap
+         USR       200,772       122,886  1311.32    10.2       10671.06  mpas_convective_diagnostics::getcape
+         USR       200,772       122,886     0.39     0.0           3.14  mcica_subcol_gen_lw::mcica_subcol_lw
+         USR       200,772       122,886  1082.31     8.4        8807.43  mcica_subcol_gen_lw::generate_stochastic_clouds
+         USR       200,772       122,886     2.57     0.0          20.92  rrtmg_lw_rad::rrtmg_lw
+         USR       200,772       122,886     5.41     0.0          43.99  rrtmg_lw_rad::inatm
+         USR       200,772       122,886     1.75     0.0          14.23  rrtmg_lw_cldprmc::cldprmc
+         USR       200,772       122,886     1.00     0.0           8.15  rrtmg_lw_setcoef::setcoef
+         USR       200,772       122,886     2.45     0.0          19.91  rrtmg_lw_taumol::taumol
+         USR       200,772       122,886     0.68     0.0           5.51  taugb1
+         USR       200,772       122,886     0.63     0.0           5.14  taugb2
+         USR       200,772       122,886     2.31     0.0          18.78  taugb3
+         USR       200,772       122,886     1.44     0.0          11.74  taugb4
+         USR       200,772       122,886     2.04     0.0          16.60  taugb5
+         USR       200,772       122,886     0.51     0.0           4.17  taugb6
+         USR       200,772       122,886     1.44     0.0          11.74  taugb7
+         USR       200,772       122,886     0.72     0.0           5.83  taugb8
+         USR       200,772       122,886     1.72     0.0          13.98  taugb9
+         USR       200,772       122,886     0.40     0.0           3.24  taugb10
+         USR       200,772       122,886     0.54     0.0           4.43  taugb11
+         USR       200,772       122,886     0.89     0.0           7.23  taugb12
+         USR       200,772       122,886     1.07     0.0           8.69  taugb13
+         USR       200,772       122,886     0.25     0.0           2.00  taugb14
+         USR       200,772       122,886     0.56     0.0           4.56  taugb15
+         USR       200,772       122,886     0.69     0.0           5.59  taugb16
+         USR       200,772       122,886    16.13     0.1         131.27  rrtmg_lw_rtrnmc::rtrnmc
+         USR       199,888        61,443     0.20     0.0           3.30  mcica_subcol_gen_sw::mcica_subcol_sw
+         USR       199,888        61,443   413.70     3.2        6733.10  mcica_subcol_gen_sw::generate_stochastic_clouds_sw
+         USR       199,888        61,443     3.31     0.0          53.94  rrtmg_sw_rad::rrtmg_sw
+         USR       199,888        61,443     4.09     0.0          66.59  rrtmg_sw_rad::inatm_sw
+         USR       199,888        61,443     1.55     0.0          25.29  rrtmg_sw_cldprmc::cldprmc_sw
+         USR       199,888        61,443     0.31     0.0           5.11  rrtmg_sw_setcoef::setcoef_sw
+         USR       199,888        61,443    45.46     0.4         739.95  rrtmg_sw_spcvmc::spcvmc_sw
+         USR       199,888        61,443     1.07     0.0          17.36  rrtmg_sw_taumol::taumol_sw
+         USR       199,888        61,443     0.28     0.0           4.60  taumol16
+         USR       199,888        61,443     0.41     0.0           6.75  taumol17
+         USR       199,888        61,443     0.32     0.0           5.21  taumol18
+         USR       199,888        61,443     0.32     0.0           5.24  taumol19
+         USR       199,888        61,443     0.31     0.0           4.98  taumol20
+         USR       199,888        61,443     0.39     0.0           6.28  taumol21
+         USR       199,888        61,443     0.21     0.0           3.38  taumol22
+         USR       199,888        61,443     0.27     0.0           4.32  taumol23
+         USR       199,888        61,443     0.35     0.0           5.64  taumol24
+         USR       199,888        61,443     0.15     0.0           2.45  taumol25
+         USR       199,888        61,443     0.09     0.0           1.46  taumol26
+         USR       199,888        61,443     0.17     0.0           2.75  taumol27
+         USR       199,888        61,443     0.23     0.0           3.78  taumol28
+         USR       199,888        61,443     0.30     0.0           4.90  taumol29
+         MPI       197,704        42,878   357.37     2.8        8334.63  MPI_Wait
+         USR       195,364       120,224     0.63     0.0           5.21  esmf_timemod::normalize_time
+         USR       195,364       120,224     0.25     0.0           2.06  esmf_calendarmod::nsecondsinyear
+         USR       195,364       120,224     0.25     0.0           2.07  esmf_calendarmod::ndaysinyear
+         USR       177,164       108,928     0.24     0.0           2.25  mpas_pool_routines::mpas_pool_get_field_2d_int
+         USR       173,966       107,056     0.25     0.0           2.30  mpas_pool_routines::mpas_pool_get_array_2d_int
+         USR       157,040        94,672     0.10     0.0           1.02  mpas_atmphys_init::r3_normalize
+         USR       148,564        91,424     0.22     0.0           2.42  mpas_pool_routines::mpas_pool_get_config_real
+         USR       136,656        84,096     0.17     0.0           2.05  mpas_dmpar::mpas_dmpar_get_time
+         USR       133,848        81,924     0.18     0.0           2.16  mpas_rbf_interpolation::mpas_legs
+         USR       133,848        81,924     0.12     0.0           1.41  mpas_rbf_interpolation::elgs
+         USR       133,848        81,924     0.85     0.0          10.34  mp_wsm6::refl10cm_wsm6
+         MPI       132,210        32,481     0.28     0.0           8.74  MPI_Test
+         MPI       117,164        27,568   168.76     1.3        6121.75  MPI_Allreduce
+         USR       109,200        67,128     0.15     0.0           2.26  mpas_pool_routines::mpas_pool_get_field_3d_real
+         USR       105,456        64,764     0.15     0.0           2.24  mpas_pool_routines::mpas_pool_get_field_1d_int
+         USR       105,066        64,656     0.20     0.0           3.06  esmf_basetimemod::esmf_basetimesum
+         USR       104,780        64,480     0.15     0.0           2.31  mpas_pool_routines::mpas_pool_get_array_3d_real
+         USR       101,946        62,736     0.13     0.0           2.12  esmf_clockmod::esmf_clockget
+         USR        99,736        61,376     0.06     0.0           1.05  esmf_calendarmod::esmf_calendarcreate
+         USR        99,658        61,328     0.13     0.0           2.16  esmf_timemod::esmf_timecopy
+         USR        99,554        61,264     0.14     0.0           2.29  mpas_pool_routines::mpas_pool_get_array_1d_int
+         USR        99,528        61,248     0.13     0.0           2.16  mpas_timekeeping::mpas_get_clock_time
+         USR        99,190        61,040     0.06     0.0           1.04  esmf_clockmod::esmf_clockgetcurrtime
+         USR        99,008        60,928     0.14     0.0           2.34  mpas_timekeeping::mpas_is_alarm_ringing
+         USR        98,436        60,576     0.06     0.0           1.06  esmf_basetimemod::compute_lcd
+         USR        97,500        60,000     0.31     0.0           5.22  esmf_timemod::esmf_timeinc
+         USR        96,252        59,232     0.12     0.0           2.11  mpas_timekeeping::add_t_ti
+         USR        96,226        59,216     0.12     0.0           2.07  esmf_timemod::timecmp
+         OMP        94,978        58,448     0.06     0.0           1.09  !$omp barrier @mpas_stream_manager.F:5584
+         COM        94,978        58,448     0.20     0.0           3.45  mpas_stream_manager::mpas_stream_mgr_begin_iteration
+         USR        94,744        58,304     0.12     0.0           2.06  esmf_timemod::esmf_timele
+         USR        93,938        57,808     0.12     0.0           2.07  mpas_timekeeping::le_t_t
+         USR        93,912        57,792     0.24     0.0           4.20  mpas_timekeeping::mpas_in_ringing_envelope
+         USR        93,548        57,568     0.13     0.0           2.30  mpas_pool_routines::pool_add_member
+         COM        85,514        52,624     1.09     0.0          20.74  mpas_atm_diagnostics_utils::mpas_field_will_be_written
+         USR        78,520        47,336     0.05     0.0           1.02  mpas_vector_operations::mpas_cross_product_in_r3
+         USR        70,330        43,280     0.09     0.0           2.19  mpas_pool_routines::mpas_pool_get_field_0d_real
+         USR        70,226        43,216     0.09     0.0           2.11  mpas_pool_routines::mpas_pool_get_array_0d_real
+         USR        66,924        40,962     0.04     0.0           1.02  mpas_block_decomp::mpas_get_local_block_id
+         USR        66,924        40,962     0.19     0.0           4.75  mpas_rbf_interpolation::mpas_rbf_interp_func_3d_plane_vec_const_dir_comp_coeffs
+         USR        66,924        40,962     1.19     0.0          29.07  mpas_rbf_interpolation::mpas_set_up_vector_dirichlet_rbf_matrix_and_rhs
+         USR        65,962        40,592     0.07     0.0           1.67  mpas_threading::mpas_threading_get_max_threads
+         COM        65,910        40,560     0.32     0.0           7.78  mpas_timer::mpas_timer_start
+         COM        65,910        40,560     0.34     0.0           8.34  mpas_timer::mpas_timer_stop
+         MPI        60,112        36,992     0.68     0.0          18.51  MPI_Waitall
+         COM        60,112        36,992     8.23     0.1         222.44  mpas_halo::mpas_halo_exch_group_full_halo_exch
+         USR        54,470        33,520     0.09     0.0           2.54  mpas_pool_routines::mpas_pool_get_field_info
+         OMP        52,156        14,324     0.02     0.0           1.09  !$omp flush @mpas_dmpar.F:8225
+         USR        51,116        31,456     0.04     0.0           1.14  mpas_io::mpas_io_err_mesg
+         USR        41,340        25,440     0.31     0.0          12.15  cu_ntiedtke::cubasmcn
+         USR        41,340        25,440     0.25     0.0           9.69  cu_ntiedtke::cuentrn
+         USR        39,598        24,368     0.06     0.0           2.41  mpas_pool_routines::mpas_pool_get_config_logical
+         USR        38,116        23,456     0.07     0.0           2.92  mpas_pool_routines::mpas_pool_get_config_int
+         USR        33,072        20,352     0.08     0.0           3.88  mpas_attlist::mpas_add_att_text
+         COM        31,408        19,328     0.19     0.0           9.88  SMIOL_inquire_var
+         OMP        31,320         5,760     0.02     0.0           2.96  !$omp parallel @mpas_atm_time_integration.F:775
+         OMP        31,320         5,760     0.02     0.0           2.84  !$omp parallel @mpas_atm_time_integration.F:800
+         USR        31,044        19,104     0.04     0.0           2.30  mpas_pool_routines::mpas_pool_get_subpool
+         USR        28,080        17,280     0.04     0.0           2.29  mpas_pool_routines::mpas_pool_get_dimension_1d
+         COM        25,688        15,808     0.12     0.0           7.52  SMIOL_inquire_dim
+         USR        23,998        14,768     0.02     0.0           1.15  smiolf::smiolf_f_to_c_string
+         COM        23,790        14,640     0.08     0.0           5.43  SMIOL_define_att
+         OMP        23,490         4,320     0.01     0.0           3.21  !$omp parallel @mpas_atm_time_integration.F:663
+         OMP        23,490         4,320     0.01     0.0           2.96  !$omp parallel @mpas_atm_time_integration.F:698
+         OMP        23,490         4,320     0.01     0.0           3.00  !$omp parallel @mpas_atm_time_integration.F:818
+         OMP        23,490         4,320     0.01     0.0           3.03  !$omp parallel @mpas_atm_time_integration.F:943
+         COM        23,270        11,704     0.06     0.0           5.03  mpas_log::mpas_log_write
+         USR        23,270        11,704     0.08     0.0           6.68  mpas_log::log_expand_string
+         USR        23,270        11,704     0.01     0.0           1.16  mpas_threading::mpas_threading_in_parallel
+         USR        20,046        12,336     0.02     0.0           1.24  mpas_c_interfacing::mpas_c_to_f_string
+         COM        19,500        12,000     0.04     0.0           3.56  mpas_io::mpas_io_put_att_text
+         COM        19,500        12,000     0.03     0.0           2.70  smiolf::smiolf_define_att_text
+         OMP        19,344        10,416     0.03     0.0           3.23  !$omp do @mpas_dmpar.F:9708
+         OMP        19,344        10,416     0.01     0.0           1.10  !$omp implicit barrier @mpas_dmpar.F:9713
+         COM        19,344        10,416     0.05     0.0           4.34  mpas_dmpar::mpas_dmpar_exch_group_unpack_buffer_field1d_real
+         USR        19,032        11,712     0.01     0.0           1.23  mpas_domain_routines::mpas_dimension_num_garbage_elements
+         OMP        18,694           719     0.01     0.0          20.10  !$omp critical (mpas_log_write_section) @mpas_log.F:574
+         OMP        18,694           719     0.34     0.0         471.55  !$omp critical sblock @mpas_log.F:574
+         MPI        18,360         4,320     0.38     0.0          87.65  MPI_Gatherv
+         USR        17,940        11,040     0.05     0.0           4.14  mpas_pool_routines::mpas_pool_add_config_int
+         USR        16,770        10,320     0.01     0.0           1.41  mpas_attlist::mpas_deallocate_attlist
+         COM        16,640        10,240     0.10     0.0           9.54  mpas_stream_manager::mpas_stream_mgr_add_field
+         COM        16,068         8,652     0.04     0.0           4.63  mpas_dmpar::mpas_dmpar_exch_group_unpack_single_buffer
+         USR        16,016         9,856     0.03     0.0           3.41  mpas_pool_routines::mpas_pool_add_field_1d_real
+         USR        14,638         9,008     0.01     0.0           1.36  mpas_pool_routines::pool_get_member_decomp_type
+         COM        14,274         8,784     0.01     0.0           1.49  mpas_io::mpas_io_def_dim
+         USR        14,222         8,752     0.02     0.0           2.49  esmf_timemod::esmf_timeget
+         USR        14,040         8,640    50.50     0.4        5844.84  mp_wsm6::slope_wsm6
+         OMP        13,702         8,432     0.01     0.0           1.13  !$omp barrier @mpas_pool_routines.F:5426
+         COM        13,702         8,432     0.03     0.0           3.40  mpas_pool_routines::mpas_pool_begin_iteration
+         USR        13,572         8,352     0.19     0.0          23.03  esmf_calendarmod::nmonthinyearsec
+         MPI        13,100         2,096    32.73     0.3       15614.05  MPI_File_read_at_all
+         COM        12,844         7,904     0.07     0.0           8.54  SMIOL_inquire_att
+         USR        12,480         7,680     0.02     0.0           2.46  mpas_dmpar::mpas_dmpar_exch_group_aggregate_exch_list
+         USR        12,480         7,680     0.01     0.0           1.03  mpas_dmpar::mpas_dmpar_build_dim_size_product
+         USR        12,246         7,536     0.03     0.0           4.17  mpas_pool_routines::mpas_pool_add_dimension_0d
+         COM        10,582         6,512     0.04     0.0           5.97  build_start_count
+         USR        10,504         6,464     0.02     0.0           3.73  mpas_bootstrapping::get_dimlist_for_field
+         COM        10,426         6,416     0.07     0.0          10.65  mpas_io_streams::mpas_streamaddfield_generic
+         COM        10,400         6,400     0.02     0.0           3.88  mpas_io_streams::put_get_field_atts
+         COM        10,244         6,304     0.02     0.0           3.70  smiolf::smiolf_inquire_var
+         USR        10,062         6,192     0.02     0.0           3.46  mpas_pool_routines::mpas_pool_add_field_2d_real
+         COM         9,854         6,064     0.02     0.0           3.66  mpas_dmpar::mpas_dmpar_min_int
+         COM         9,828         6,048     0.04     0.0           5.90  mpas_io::mpas_io_set_var_indices
+         COM         9,828         6,048     0.33     0.0          55.35  transfer_field
+         COM         9,568         5,888     0.02     0.0           3.55  mpas_dmpar::mpas_dmpar_sum_int
+         USR         9,542         5,872     0.02     0.0           3.95  mpas_io_streams::mergearrays
+         OMP         9,360         5,760     0.03     0.0           5.38  !$omp do @mpas_atm_time_integration.F:775
+         OMP         9,360         5,760     0.02     0.0           3.28  !$omp implicit barrier @mpas_atm_time_integration.F:786
+         OMP         9,360         5,760     0.04     0.0           7.71  !$omp do @mpas_atm_time_integration.F:800
+         OMP         9,360         5,760     0.02     0.0           2.69  !$omp implicit barrier @mpas_atm_time_integration.F:805
+         OMP         9,360         5,760     0.05     0.0           8.28  !$omp barrier @mpas_atm_time_integration.F:2250
+         COM         9,360         5,760     0.37     0.0          64.12  atm_time_integration::atm_advance_acoustic_step
+         COM         9,360         5,760    29.36     0.2        5097.52  atm_time_integration::atm_advance_acoustic_step_work
+         USR         9,360         5,760     6.33     0.0        1098.97  atm_time_integration::atm_divergence_damping_3d
+         USR         9,360         5,760    20.93     0.2        3633.52  mp_wsm6::nislfv_rain_plm
+         COM         8,476         5,216     0.05     0.0           9.53  mpas_io_streams::mpas_streamaddfield_1dreal
+         USR         8,476         5,216     0.01     0.0           1.13  smiolf::c_loc_assumed_shape_1d_real32
+         USR         8,398         5,168     0.01     0.0           1.15  ezxml_attr
+         OMP         8,268         4,452     0.02     0.0           5.18  !$omp do @mpas_dmpar.F:9770
+         OMP         8,268         4,452     0.01     0.0           1.14  !$omp implicit barrier @mpas_dmpar.F:9777
+         COM         8,268         4,452     0.02     0.0           4.29  mpas_dmpar::mpas_dmpar_exch_group_unpack_buffer_field2d_real
+         USR         8,008         4,928     0.02     0.0           3.26  mpas_field_routines::mpas_deallocate_field1d_real
+         USR         8,008         4,928     0.02     0.0           3.56  mpas_field_routines::mpas_deallocate_field1d_real_target
+         MPI         7,888         1,856     4.02     0.0        2167.62  MPI_Scatterv
+         OMP         7,830         1,440     0.00     0.0           3.12  !$omp parallel @mpas_atm_time_integration.F:610
+         OMP         7,830         1,440     0.00     0.0           3.12  !$omp parallel @mpas_atm_time_integration.F:1010
+         OMP         7,830         1,440     0.00     0.0           2.95  !$omp parallel @mpas_atm_time_integration.F:1390
+         USR         7,826         4,816     0.01     0.0           2.32  smiolf::smiolf_set_frame
+         USR         7,826         4,816     0.01     0.0           1.11  SMIOL_set_frame
+         USR         7,566         4,656     0.01     0.0           2.15  esmf_basetimemod::esmf_basetimedifference
+         COM         7,176         4,416     0.02     0.0           3.57  mpas_io::mpas_io_def_var
+         COM         7,176         4,416     0.02     0.0           4.30  smiolf::smiolf_define_var
+         COM         7,176         4,416     0.04     0.0           9.60  SMIOL_define_var
+         COM         7,176         4,416     0.02     0.0           4.22  mpas_io::mpas_io_put_var_generic
+         COM         7,176         4,416     0.08     0.0          18.10  SMIOL_put_var
+         COM         7,176         4,416     0.09     0.0          20.80  write_chunk_pnetcdf
+         OMP         7,046         4,336     0.03     0.0           7.32  !$omp barrier @mpas_atm_time_integration.F:5244
+         OMP         7,046         4,336     0.03     0.0           6.42  !$omp barrier @mpas_atm_time_integration.F:5289
+         OMP         7,046         4,336     0.03     0.0           7.96  !$omp barrier @mpas_atm_time_integration.F:5359
+         OMP         7,046         4,336     0.03     0.0           5.80  !$omp barrier @mpas_atm_time_integration.F:5393
+         USR         7,046         4,336     0.01     0.0           2.35  mpas_timekeeping::mpas_split_string
+         COM         7,046         4,336     0.23     0.0          52.24  atm_time_integration::atm_compute_solve_diagnostics
+         COM         7,046         4,336    28.72     0.2        6624.38  atm_time_integration::atm_compute_solve_diagnostics_work
+         OMP         7,020         4,320     0.02     0.0           5.70  !$omp do @mpas_atm_time_integration.F:663
+         OMP         7,020         4,320     0.01     0.0           3.45  !$omp implicit barrier @mpas_atm_time_integration.F:673
+         OMP         7,020         4,320     0.02     0.0           5.22  !$omp do @mpas_atm_time_integration.F:698
+         OMP         7,020         4,320     0.01     0.0           3.41  !$omp implicit barrier @mpas_atm_time_integration.F:706
+         OMP         7,020         4,320     0.02     0.0           5.21  !$omp do @mpas_atm_time_integration.F:818
+         OMP         7,020         4,320     0.01     0.0           2.87  !$omp implicit barrier @mpas_atm_time_integration.F:829
+         OMP         7,020         4,320     0.02     0.0           5.61  !$omp do @mpas_atm_time_integration.F:943
+         OMP         7,020         4,320     0.02     0.0           3.48  !$omp implicit barrier @mpas_atm_time_integration.F:950
+         OMP         7,020         4,320     0.03     0.0           7.78  !$omp barrier @mpas_atm_time_integration.F:2683
+         OMP         7,020         4,320     0.03     0.0           7.16  !$omp barrier @mpas_atm_time_integration.F:2698
+         OMP         7,020         4,320     0.03     0.0           7.50  !$omp barrier @mpas_atm_time_integration.F:4370
+         OMP         7,020         4,320     0.04     0.0           9.37  !$omp barrier @mpas_atm_time_integration.F:4612
+         COM         7,020         4,320     0.58     0.0         133.69  atm_time_integration::atm_compute_dyn_tend
+         COM         7,020         4,320   113.06     0.9       26171.97  atm_time_integration::atm_compute_dyn_tend_work
+         USR         7,020         4,320     0.19     0.0          43.27  atm_time_integration::atm_set_smlstep_pert_variables
+         USR         7,020         4,320     7.92     0.1        1832.50  atm_time_integration::atm_set_smlstep_pert_variables_work
+         COM         7,020         4,320     0.25     0.0          57.72  atm_time_integration::atm_recover_large_step_variables
+         COM         7,020         4,320    35.86     0.3        8301.11  atm_time_integration::atm_recover_large_step_variables_work
+         COM         6,864         4,224     0.01     0.0           2.36  mpas_io::mpas_io_put_var_real1d
+         COM         6,864         4,224     0.01     0.0           3.52  smiolf::smiolf_put_var_1d_real32
+         USR         6,552         4,032     0.01     0.0           2.55  mpas_dmpar::mpas_dmpar_destroy_communication_list
+         COM         6,552         4,032     0.01     0.0           3.24  mpas_io::mpas_io_get_att_text
+         COM         6,396         3,936     0.02     0.0           3.93  smiolf::smiolf_inquire_att_text
+         USR         6,318         3,888     0.01     0.0           2.23  esmf_timeintervalmod::normalize_timeint
+         USR         6,318         3,888     0.01     0.0           2.30  esmf_timemod::timegetmonth
+         USR         6,318         3,888     0.01     0.0           2.16  esmf_timemod::timegetdayofmonth
+         USR         6,318         3,888     0.02     0.0           4.28  esmf_calendarmod::ndayinyearsec
+         COM         5,954         3,664     0.01     0.0           3.39  smiolf::smiolf_inquire_dim
+         COM         5,928         3,648     0.01     0.0           3.49  mpas_dmpar::mpas_dmpar_bcast_reals
+         USR         5,252         3,232     0.02     0.0           5.54  stream_mgr_add_field_c
+         USR         5,252         3,232     0.01     0.0           3.67  mpas_field_routines::mpas_deallocate_field2d_real_target
+         COM         5,148         3,168     0.01     0.0           3.49  mpas_io_streams::mpas_writestreamatt_text
+         OMP         4,680         2,880     0.02     0.0           6.17  !$omp barrier @mpas_atm_time_integration.F:3449
+         OMP         4,680         2,880     0.01     0.0           4.85  !$omp barrier @mpas_atm_time_integration.F:3544
+         OMP         4,680         2,880     0.02     0.0           5.25  !$omp barrier @mpas_atm_time_integration.F:3597
+         OMP         4,680         2,880     0.02     0.0           6.58  !$omp barrier @mpas_atm_time_integration.F:3657
+         OMP         4,680         2,880     0.02     0.0           6.65  !$omp barrier @mpas_atm_time_integration.F:3716
+         OMP         4,680         2,880     0.01     0.0           3.88  !$omp master @mpas_atm_time_integration.F:3717
+         OMP         4,680         2,880     0.01     0.0           2.21  !$omp barrier @mpas_atm_time_integration.F:3720
+         OMP         4,680         2,880     0.02     0.0           5.85  !$omp barrier @mpas_atm_time_integration.F:3763
+         OMP         4,680         2,880     0.02     0.0           5.35  !$omp barrier @mpas_atm_time_integration.F:3822
+         USR         4,680         2,880    24.47     0.2        8495.06  mp_wsm6::nislfv_rain_plm6
+         USR         4,628         2,848     0.01     0.0           3.28  mpas_field_routines::mpas_deallocate_field2d_real
+         USR         4,550         2,800     0.01     0.0           3.02  mpas_pool_routines::mpas_pool_create_pool
+         USR         4,498         2,768     0.03     0.0          12.49  mpas_pool_routines::mpas_pool_destroy_pool
+         OMP         4,212         2,268     0.01     0.0           3.38  !$omp do @mpas_dmpar.F:9513
+         OMP         4,212         2,268     0.00     0.0           1.11  !$omp implicit barrier @mpas_dmpar.F:9519
+         COM         4,212         2,268     0.01     0.0           4.35  mpas_dmpar::mpas_dmpar_exch_group_unpack_buffer_field1d_integer
+         USR         4,004         2,464     0.01     0.0           2.47  esmf_timeintervalmod::esmf_timeintervalset
+         USR         3,926         2,416     0.01     0.0           5.11  mpas_timekeeping::mpas_get_time
+         USR         3,900         2,400     0.01     0.0           2.15  mpas_pool_routines::mpas_pool_get_package
+         USR         3,614         2,224     0.02     0.0           7.54  esmf_timemod::esmfold_timegetstring
+         COM         3,510         2,160     0.02     0.0           8.25  mpas_io::mpas_io_inq_var
+         MPI         3,484         2,144    84.44     0.7       39382.99  MPI_File_set_view
+         COM         3,406         2,096     0.01     0.0           5.47  mpas_io::mpas_io_get_var_generic
+         COM         3,406         2,096     0.10     0.0          46.27  SMIOL_get_var
+         COM         3,406         2,096     0.39     0.0         186.29  read_chunk_pnetcdf
+         OMP         3,276         1,764     0.01     0.0           4.72  !$omp do @mpas_dmpar.F:9576
+         OMP         3,276         1,764     0.00     0.0           1.13  !$omp implicit barrier @mpas_dmpar.F:9584
+         COM         3,276         1,764     0.01     0.0           4.35  mpas_dmpar::mpas_dmpar_exch_group_unpack_buffer_field2d_integer
+         OMP         3,224         1,984     0.01     0.0           3.87  !$omp do @mpas_dmpar.F:8685
+         OMP         3,224         1,984     0.00     0.0           1.13  !$omp implicit barrier @mpas_dmpar.F:8712
+         COM         3,224         1,984     0.00     0.0           2.17  mpas_dmpar::mpas_dmpar_exch_group_pack_buffer_field1d_real
+         COM         3,224         1,984     0.00     0.0           2.16  mpas_dmpar::mpas_dmpar_exch_group_local_exch_field1d_real
+         USR         3,198         1,968     0.01     0.0           4.07  mpas_pool_routines::mpas_pool_add_dimension_1d
+         COM         3,146         1,936     0.01     0.0           3.61  mpas_dmpar::mpas_dmpar_max_real
+         USR         3,120         1,920     0.00     0.0           2.10  mpas_pool_routines::mpas_pool_config_type
+         USR         3,120         1,920     1.21     0.0         629.13  bl_ysu::tridin_ysu
+         USR         3,120         1,920     0.00     0.0           2.56  mpas_field_routines::mpas_shift_time_levs_2dreal
+         USR         2,886         1,776     0.00     0.0           1.44  mpas_stream_manager::is_decomposed_dim
+         USR         2,704         1,664     0.40     0.0         243.03  mpas_timekeeping::mpas_set_timeinterval
+         COM         2,678         1,648     0.01     0.0           7.71  mpas_dmpar::mpas_dmpar_field_halo_exch
+         USR         2,678         1,648     0.01     0.0           3.52  mpas_dmpar::mpas_dmpar_exch_group_create
+         USR         2,678         1,648     0.01     0.0           3.54  mpas_dmpar::mpas_dmpar_exch_group_add_field
+         COM         2,678         1,648     0.01     0.0           8.93  mpas_dmpar::mpas_dmpar_exch_group_full_halo_exch
+         COM         2,678         1,648     0.02     0.0          10.27  mpas_dmpar::mpas_dmpar_exch_group_build_buffers
+         COM         2,678         1,648     0.02     0.0           9.63  mpas_dmpar::mpas_dmpar_exch_group_start_recv
+         COM         2,678         1,648     0.01     0.0           4.95  mpas_dmpar::mpas_dmpar_exch_group_pack_buffers
+         COM         2,678         1,648     0.02     0.0           9.94  mpas_dmpar::mpas_dmpar_exch_group_start_send
+         COM         2,678         1,648     0.01     0.0           5.90  mpas_dmpar::mpas_dmpar_exch_group_local_exch_fields
+         COM         2,678         1,648     0.60     0.0         366.49  mpas_dmpar::mpas_dmpar_exch_group_unpack_buffers
+         COM         2,678         1,648     0.02     0.0          12.19  mpas_dmpar::mpas_dmpar_exch_group_destroy_buffers
+         USR         2,678         1,648     0.01     0.0           3.43  mpas_dmpar::mpas_dmpar_exch_group_destroy
+         OMP         2,610           480     0.00     0.0           3.30  !$omp parallel @mpas_atmphys_driver.F:196
+         OMP         2,610           480     0.00     0.0           2.99  !$omp parallel @mpas_atmphys_driver.F:259
+         OMP         2,610           480     0.00     0.0           2.98  !$omp parallel @mpas_atmphys_driver.F:274
+         OMP         2,610           480     0.00     0.0           3.16  !$omp parallel @mpas_atmphys_driver.F:286
+         OMP         2,610           480     0.00     0.0           3.40  !$omp parallel @mpas_atmphys_driver.F:299
+         OMP         2,610           480     0.00     0.0           2.73  !$omp parallel @mpas_atmphys_driver.F:309
+         OMP         2,610           480     0.00     0.0           3.57  !$omp parallel @mpas_atmphys_driver.F:317
+         OMP         2,610           480     0.00     0.0           2.67  !$omp parallel @mpas_atmphys_driver.F:327
+         OMP         2,610           480     0.00     0.0           3.14  !$omp parallel @mpas_atm_time_integration.F:544
+         OMP         2,610           480     0.00     0.0           2.78  !$omp parallel @mpas_atm_time_integration.F:560
+         OMP         2,610           480     0.00     0.0           3.20  !$omp parallel @mpas_atm_time_integration.F:1173
+         USR         2,496         1,536     0.01     0.0           4.27  mpas_pool_routines::mpas_pool_add_config_char
+         COM         2,470         1,520     0.01     0.0           3.61  mpas_stream_manager::stream_active_pkg_check
+         COM         2,418         1,488     0.01     0.0           4.96  mpas_stream_manager::write_stream
+         OMP         2,340         1,260     1.54     0.0        1223.37  !$omp do @mpas_dmpar.F:9834
+         OMP         2,340         1,260     0.00     0.0           1.36  !$omp implicit barrier @mpas_dmpar.F:9844
+         OMP         2,340         1,440     9.95     0.1        6910.74  !$omp do @mpas_field_routines.F:545
+         OMP         2,340         1,440     0.00     0.0           2.33  !$omp implicit barrier @mpas_field_routines.F:551
+         OMP         2,340         1,440     0.01     0.0           5.55  !$omp do @mpas_atm_time_integration.F:610
+         OMP         2,340         1,440     0.00     0.0           3.30  !$omp implicit barrier @mpas_atm_time_integration.F:618
+         OMP         2,340         1,440     0.02     0.0          11.89  !$omp do @mpas_atm_time_integration.F:1010
+         OMP         2,340         1,440     0.01     0.0           3.83  !$omp implicit barrier @mpas_atm_time_integration.F:1020
+         OMP         2,340         1,440     0.01     0.0           5.35  !$omp do @mpas_atm_time_integration.F:1390
+         OMP         2,340         1,440     0.00     0.0           3.15  !$omp implicit barrier @mpas_atm_time_integration.F:1410
+         OMP         2,340         1,440     0.02     0.0          10.47  !$omp barrier @mpas_atm_time_integration.F:4453
+         OMP         2,340         1,440     0.01     0.0          10.09  !$omp barrier @mpas_atm_time_integration.F:4489
+         OMP         2,340         1,440     0.01     0.0           7.17  !$omp barrier @mpas_atm_time_integration.F:4517
+         OMP         2,340         1,440     0.01     0.0           9.19  !$omp barrier @mpas_atm_time_integration.F:4734
+         OMP         2,340         1,440     0.01     0.0           9.31  !$omp barrier @mpas_atm_time_integration.F:4905
+         USR         2,340         1,440     0.01     0.0           4.15  mpas_pool_routines::mpas_pool_add_config_real
+         USR         2,340         1,440     0.00     0.0           1.17  ezxml_decode
+         COM         2,340         1,260     0.01     0.0           4.51  mpas_dmpar::mpas_dmpar_exch_group_unpack_buffer_field3d_real
+         COM         2,340         1,440     0.01     0.0           3.52  mpas_io_streams::mpas_writestreamatt_0dreal
+         COM         2,340         1,440     0.00     0.0           3.31  mpas_io::mpas_io_put_att_real0d
+         COM         2,340         1,440     0.00     0.0           2.49  smiolf::smiolf_define_att_float
+         COM         2,340         1,440     0.01     0.0           5.21  mpas_field_routines::mpas_allocate_scratch_field2d_real
+         USR         2,340         1,440     0.05     0.0          35.74  atm_time_integration::atm_compute_vert_imp_coefs
+         USR         2,340         1,440     2.18     0.0        1511.33  atm_time_integration::atm_compute_vert_imp_coefs_work
+         USR         2,340         1,440     4.99     0.0        3461.98  atm_time_integration::atm_rk_dynamics_substep_finish
+         USR         2,340         1,440     0.00     0.0           2.66  mpas_field_routines::mpas_deallocate_scratch_field2d_real
+         COM         2,340         1,440     0.05     0.0          37.70  atm_time_integration::advance_scalars
+         COM         2,340         1,440     0.01     0.0           6.68  mpas_dmpar::mpas_dmpar_min_real
+         USR         2,132         1,312     0.00     0.0           3.51  mpas_pool_routines::mpas_pool_add_field_1d_int
+         COM         2,080         1,280     0.71     0.0         555.40  mpas_dmpar::mpas_dmpar_bcast_int
+         USR         1,950         1,200     0.00     0.0           1.16  esmf_clockmod::esmf_clockgetstarttime
+         USR         1,950         1,200     0.00     0.0           2.38  mpas_pool_routines::mpas_pool_get_field_0d_char
+         COM         1,950         1,200     0.00     0.0           3.48  mpas_io_streams::mpas_writestreamatt_0dinteger
+         COM         1,950         1,200     0.00     0.0           3.35  mpas_io::mpas_io_put_att_int0d
+         COM         1,950         1,200     0.00     0.0           2.51  smiolf::smiolf_define_att_int
+         USR         1,846         1,136     0.00     0.0           3.29  mpas_pool_routines::pool_remove_member
+         USR         1,716         1,056     0.00     0.0           2.38  mpas_pool_routines::mpas_pool_get_array_0d_char
+         COM         1,690         1,040     0.00     0.0           3.52  mpas_dmpar::mpas_dmpar_bcast_real
+         COM         1,690         1,040     0.00     0.0           4.39  mpas_stream_manager::mpas_stream_mgr_reset_alarms
+         USR         1,638         1,008     0.01     0.0           7.49  mpas_stream_manager::mpas_stream_mgr_add_att_char
+         COM         1,612           992     0.00     0.0           2.72  mpas_io::mpas_io_get_var_real1d
+         COM         1,612           992     0.00     0.0           4.07  smiolf::smiolf_get_var_1d_real32
+         OMP         1,560           960     0.01     0.0           9.42  !$omp barrier @mpas_atm_time_integration.F:3040
+         USR         1,560           960     0.01     0.0          14.32  module_sf_sfclay::sfclay
+         USR         1,560           960     1.33     0.0        1384.35  module_sf_sfclay::sfclay1d
+         USR         1,560           960     0.81     0.0         841.62  mpas_atmphys_todynamics::tend_toedges
+         COM         1,560           960     0.04     0.0          38.71  atm_time_integration::atm_advance_scalars
+         COM         1,560           960    28.45     0.2       29630.72  atm_time_integration::atm_advance_scalars_work
+         USR         1,560           960     0.00     0.0           2.75  mpas_field_routines::mpas_shift_time_levs_0dchar
+         USR         1,560           960     0.00     0.0           2.49  mpas_field_routines::mpas_shift_time_levs_3dreal
+         COM         1,560           960     0.00     0.0           3.45  mpas_dmpar::mpas_dmpar_sum_real
+         USR         1,508           928     0.00     0.0           3.46  mpas_field_routines::mpas_deallocate_field1d_integer
+         USR         1,508           928     0.00     0.0           3.34  mpas_field_routines::mpas_deallocate_field1d_integer_target
+         USR         1,508           928     0.00     0.0           1.24  esmf_timeintervalmod::timeintchecknormalized
+         OMP         1,378           848     0.02     0.0          18.93  !$omp do @mpas_dmpar.F:8754
+         OMP         1,378           848     0.00     0.0           1.22  !$omp implicit barrier @mpas_dmpar.F:8783
+         USR         1,378           848     0.26     0.0         310.70  mpas_sort::mpas_quicksort_2dint
+         COM         1,378           848     0.00     0.0           2.15  mpas_dmpar::mpas_dmpar_exch_group_pack_buffer_field2d_real
+         COM         1,378           848     0.00     0.0           2.09  mpas_dmpar::mpas_dmpar_exch_group_local_exch_field2d_real
+         USR         1,300           800     0.00     0.0           1.30  mpas_log::mpas_log_escape_dollars
+         USR         1,274           784     0.00     0.0           4.32  mpas_pool_routines::mpas_pool_add_config_logical
+         COM         1,274           784     0.00     0.0           5.97  mpas_log_write_c
+         USR         1,222           752     0.00     0.0           2.35  mpas_timekeeping::sub_t_t
+         USR         1,222           752     0.01     0.0           7.58  esmf_timemod::esmf_timediff
+         USR         1,196           736     0.00     0.0           3.44  esmf_timeintervalmod::esmf_timeintervalget
+         USR         1,170           720     0.00     0.0           2.80  mpas_stream_manager::mpas_stream_mgr_get_property_char
+         USR         1,118           688     0.00     0.0           1.31  ezxml_child
+         USR         1,118           688     0.00     0.0           1.10  mpas_hash::mpas_hash_size
+         USR         1,092           672     0.01     0.0          10.02  mpas_hash::mpas_hash_init
+         USR         1,092           672     0.07     0.0          99.93  mpas_hash::mpas_hash_destroy
+         USR         1,066           656     0.00     0.0           3.94  mpas_pool_routines::mpas_pool_add_subpool
+         MPI         1,040           640     0.00     0.0           2.05  MPI_Comm_rank
+         COM         1,040           640     0.00     0.0           3.93  mpas_dmpar::mpas_dmpar_bcast_char
+         USR         1,014           624     0.00     0.0           2.41  mpas_pool_routines::mpas_pool_remove_field
+         USR         1,014           624     0.00     0.0           2.79  mpas_timekeeping::mpas_get_timeinterval
+         USR           936           576     0.00     0.0           6.96  uniqueness_check
+         USR           936           576     0.01     0.0          10.14  mpas_halo::mpas_halo_exch_group_add_field
+         USR           936           576     0.01     0.0          12.60  mpas_halo::mpas_halo_compact_halo_info
+         USR           910           560     0.00     0.0           2.44  mpas_pool_routines::mpas_pool_get_field_0d_int
+         USR           884           544     0.00     0.0           2.18  esmf_timemod::esmf_timege
+         USR           858           528     0.00     0.0           1.22  smiolf::c_loc_assumed_shape_2d_real32
+         USR           858           528     0.00     0.0           2.40  mpas_pool_routines::mpas_pool_get_array_0d_int
+         USR           832           512     0.00     0.0           1.27  esmf_timemod::esmf_timegetdayofyearinteger
+         COM           832           512     0.00     0.0           3.97  mpas_atm_diagnostics_manager::mpas_atm_diag_reset
+         USR           832           512     0.00     0.0           1.24  mpas_diagnostic_template::diagnostic_template_reset
+         COM           832           512     0.00     0.0           5.58  mpas_convective_diagnostics::convective_diagnostics_reset
+         OMP           806           496     1.18     0.0        2380.33  !$omp do @mpas_vector_reconstruction.F:247
+         OMP           806           496     0.00     0.0           4.35  !$omp implicit barrier @mpas_vector_reconstruction.F:267
+         OMP           806           496     0.21     0.0         428.96  !$omp do @mpas_vector_reconstruction.F:272
+         OMP           806           496     0.00     0.0           3.13  !$omp implicit barrier @mpas_vector_reconstruction.F:284
+         USR           806           496     0.00     0.0           3.69  mpas_pool_routines::mpas_pool_add_field_3d_real
+         COM           806           496     0.01     0.0          13.98  mpas_vector_reconstruction::mpas_reconstruct_2d
+         USR           806           496     0.00     0.0           4.40  mpas_atm_diagnostics_manager::mpas_atm_diag_update
+         USR           806           496     0.00     0.0           1.28  mpas_diagnostic_template::diagnostic_template_update
+         USR           806           496     1.79     0.0        3599.43  mpas_convective_diagnostics::convective_diagnostics_update
+         COM           806           496     0.01     0.0          11.02  mpas_atm_diagnostics_manager::mpas_atm_diag_compute
+         USR           806           496     0.00     0.0           1.60  mpas_diagnostic_template::diagnostic_template_compute
+         COM           806           496     0.04     0.0          74.91  mpas_isobaric_diagnostics::isobaric_diagnostics_compute
+         COM           806           496     0.00     0.0           5.70  mpas_cloud_diagnostics::cloud_diagnostics_compute
+         COM           806           496     1.65     0.0        3324.34  mpas_convective_diagnostics::convective_diagnostics_compute
+         COM           806           496     0.01     0.0          19.57  mpas_pv_diagnostics::pv_diagnostics_compute
+         USR           806           496     0.00     0.0           2.36  mpas_soundings::soundings_compute
+         COM           806           496     0.00     0.0           7.11  mpas_stream_manager::mpas_stream_mgr_write
+         USR           806           496     0.00     0.0           6.58  mpas_timekeeping::mpas_is_clock_stop_time
+         USR           806           496     0.00     0.0           1.11  esmf_clockmod::esmf_clockgetstoptime
+         OMP           780           480     0.01     0.0          12.04  !$omp do @mpas_atmphys_driver.F:196
+         OMP           780           480     0.00     0.0           3.86  !$omp implicit barrier @mpas_atmphys_driver.F:201
+         OMP           780           480     0.00     0.0           4.58  !$omp do @mpas_atmphys_driver.F:259
+         OMP           780           480     0.00     0.0           2.02  !$omp implicit barrier @mpas_atmphys_driver.F:264
+         OMP           780           480     0.00     0.0           4.61  !$omp do @mpas_atmphys_driver.F:274
+         OMP           780           480     0.00     0.0           2.10  !$omp implicit barrier @mpas_atmphys_driver.F:279
+         OMP           780           480     0.00     0.0           5.74  !$omp do @mpas_atmphys_driver.F:286
+         OMP           780           480     0.00     0.0           3.66  !$omp implicit barrier @mpas_atmphys_driver.F:291
+         OMP           780           480     0.00     0.0           5.58  !$omp do @mpas_atmphys_driver.F:299
+         OMP           780           480     0.00     0.0           3.12  !$omp implicit barrier @mpas_atmphys_driver.F:304
+         OMP           780           480     0.00     0.0           4.23  !$omp do @mpas_atmphys_driver.F:309
+         OMP           780           480     0.00     0.0           1.67  !$omp implicit barrier @mpas_atmphys_driver.F:314
+         OMP           780           480     0.00     0.0           5.55  !$omp do @mpas_atmphys_driver.F:317
+         OMP           780           480     0.00     0.0           2.55  !$omp implicit barrier @mpas_atmphys_driver.F:322
+         OMP           780           480     0.00     0.0           3.94  !$omp do @mpas_atmphys_driver.F:327
+         OMP           780           480     0.00     0.0           1.64  !$omp implicit barrier @mpas_atmphys_driver.F:332
+         OMP           780           480     0.00     0.0           1.27  !$omp barrier @mpas_timekeeping.F:422
+         OMP           780           480     5.92     0.0       12336.25  !$omp do @mpas_field_routines.F:633
+         OMP           780           480     0.00     0.0           4.77  !$omp implicit barrier @mpas_field_routines.F:641
+         OMP           780           480     0.00     0.0           9.11  !$omp do @mpas_atm_time_integration.F:544
+         OMP           780           480     0.00     0.0           3.35  !$omp implicit barrier @mpas_atm_time_integration.F:554
+         OMP           780           480     0.00     0.0           7.13  !$omp do @mpas_atm_time_integration.F:560
+         OMP           780           480     0.00     0.0           2.40  !$omp implicit barrier @mpas_atm_time_integration.F:570
+         OMP           780           480     0.00     0.0           5.50  !$omp do @mpas_atm_time_integration.F:1173
+         OMP           780           480     0.00     0.0           2.21  !$omp implicit barrier @mpas_atm_time_integration.F:1178
+         OMP           780           480     0.00     0.0           5.93  !$omp barrier @mpas_atm_time_integration.F:3392
+         OMP           780           480     0.00     0.0           3.75  !$omp master @mpas_atm_time_integration.F:3393
+         OMP           780           480     0.00     0.0           2.79  !$omp barrier @mpas_atm_time_integration.F:3396
+         OMP           780           480     0.00     0.0           5.08  !$omp barrier @mpas_atm_time_integration.F:3427
+         OMP           780           480     0.00     0.0           2.97  !$omp master @mpas_atmphys_driver_microphysics.F:330
+         OMP           780           480     0.00     0.0           2.33  !$omp barrier @mpas_atmphys_driver_microphysics.F:333
+         OMP           780           480     0.00     0.0           4.04  !$omp barrier @mpas_atmphys_driver_microphysics.F:441
+         OMP           780           480     0.00     0.0           3.78  !$omp master @mpas_atmphys_driver_microphysics.F:442
+         USR           780           480     0.00     0.0           7.43  mpas_stream_manager::mpas_stream_mgr_add_att_real
+         COM           780           480     0.00     0.0          10.15  mpas_io_streams::mpas_streamaddfield_2dreal
+         USR           780           480     0.26     0.0         539.97  mpas_isobaric_diagnostics::interp_tofixed_pressure
+         COM           780           480     0.01     0.0          11.33  atm_core::atm_do_timestep
+         COM           780           480     0.02     0.0          40.87  mpas_atmphys_manager::physics_timetracker
+         USR           780           480     0.00     0.0           1.25  mpas_timekeeping::isleapyear
+         COM           780           480     0.07     0.0         148.66  mpas_atmphys_driver::physics_driver
+         USR           780           480     0.01     0.0          21.99  mpas_atmphys_interface::allocate_forall_physics
+         USR           780           480     6.94     0.1       14462.72  mpas_atmphys_interface::mpas_to_physics
+         USR           780           480     0.00     0.0           4.27  mpas_atmphys_driver_cloudiness::deallocate_cloudiness
+         USR           780           480     0.00     0.0           5.33  mpas_atmphys_driver_radiation_sw::deallocate_radiation_sw
+         USR           780           480     0.00     0.0           3.94  mpas_atmphys_driver_radiation_lw::deallocate_radiation_lw
+         USR           780           480     0.01     0.0          21.58  mpas_atmphys_driver_sfclayer::allocate_sfclayer
+         COM           780           480     0.01     0.0          19.63  mpas_atmphys_driver_sfclayer::driver_sfclayer
+         USR           780           480     0.37     0.0         763.50  mpas_atmphys_driver_sfclayer::sfclayer_from_mpas
+         USR           780           480     0.13     0.0         276.17  mpas_atmphys_driver_sfclayer::sfclayer_to_mpas
+         USR           780           480     0.00     0.0           8.29  mpas_atmphys_driver_sfclayer::deallocate_sfclayer
+         USR           780           480     0.01     0.0          10.72  mpas_atmphys_driver_lsm::allocate_lsm
+         COM           780           480     0.01     0.0          19.03  mpas_atmphys_driver_lsm::driver_lsm
+         USR           780           480     0.23     0.0         477.34  mpas_atmphys_driver_lsm::lsm_from_mpas
+         USR           780           480     0.00     0.0           6.50  mpas_atmphys_driver_lsm::correct_tsk_over_seaice
+         USR           780           480     0.68     0.0        1416.04  module_sf_noahdrv::lsm
+         USR           780           480     0.10     0.0         200.77  module_sf_noah_seaice_drv::seaice_noah
+         USR           780           480     0.09     0.0         181.98  module_sf_sfcdiags::sfcdiags
+         USR           780           480     0.24     0.0         501.73  mpas_atmphys_driver_lsm::lsm_to_mpas
+         USR           780           480     0.00     0.0           7.55  mpas_atmphys_driver_lsm::deallocate_lsm
+         USR           780           480     0.01     0.0          12.68  mpas_atmphys_driver_pbl::allocate_pbl
+         COM           780           480     0.01     0.0          20.61  mpas_atmphys_driver_pbl::driver_pbl
+         USR           780           480     0.56     0.0        1164.44  mpas_atmphys_driver_pbl::pbl_from_mpas
+         USR           780           480     2.92     0.0        6089.97  module_bl_ysu::ysu
+         USR           780           480    20.96     0.2       43659.73  bl_ysu::bl_ysu_run
+         USR           780           480     0.17     0.0         361.37  bl_ysu::tridi2n
+         USR           780           480     4.03     0.0        8397.42  mpas_atmphys_driver_pbl::pbl_to_mpas
+         USR           780           480     0.12     0.0         249.71  mpas_atmphys_driver_pbl::deallocate_pbl
+         USR           780           480     0.00     0.0           7.04  mpas_atmphys_driver_gwdo::allocate_gwdo
+         COM           780           480     0.01     0.0          18.85  mpas_atmphys_driver_gwdo::driver_gwdo
+         USR           780           480     0.69     0.0        1428.19  mpas_atmphys_driver_gwdo::gwdo_from_mpas
+         USR           780           480     0.70     0.0        1459.08  module_bl_gwdo::gwdo
+         USR           780           480     2.93     0.0        6101.94  bl_gwdo::bl_gwdo_run
+         USR           780           480     2.04     0.0        4254.37  mpas_atmphys_driver_gwdo::gwdo_to_mpas
+         USR           780           480     0.00     0.0           6.07  mpas_atmphys_driver_gwdo::deallocate_gwdo
+         USR           780           480     0.00     0.0           3.34  mpas_atmphys_driver_convection::update_convection_step1
+         USR           780           480     0.98     0.0        2033.10  mpas_atmphys_driver_convection::allocate_convection
+         COM           780           480     0.01     0.0          23.60  mpas_atmphys_driver_convection::driver_convection
+         USR           780           480     1.87     0.0        3899.15  mpas_atmphys_driver_convection::convection_from_mpas
+         USR           780           480     1.00     0.0        2089.65  module_cu_ntiedtke::cu_ntiedtke_driver
+         USR           780           480     0.00     0.0           2.27  cu_ntiedtke::cu_ntiedtke_init
+         USR           780           480     1.15     0.0        2390.12  cu_ntiedtke::cu_ntiedtke_timestep_init
+         USR           780           480    80.70     0.6      168133.33  cu_ntiedtke::cu_ntiedtke_run
+         USR           780           480     4.44     0.0        9250.75  cu_ntiedtke::cumastrn
+         USR           780           480     2.01     0.0        4184.44  cu_ntiedtke::cuinin
+         USR           780           480   144.75     1.1      301567.23  cu_ntiedtke::cutypen
+         USR           780           480    20.89     0.2       43518.98  cu_ntiedtke::cuascn
+         USR           780           480    66.50     0.5      138551.85  cu_ntiedtke::cudlfsn
+         USR           780           480     0.57     0.0        1181.36  cu_ntiedtke::cuddrafn
+         USR           780           480    21.24     0.2       44242.72  cu_ntiedtke::cuflxn
+         USR           780           480    48.09     0.4      100189.70  cu_ntiedtke::cudtdqn
+         USR           780           480     0.81     0.0        1677.48  cu_ntiedtke::cududvn
+         USR           780           480     0.38     0.0         786.84  cu_ntiedtke::cu_ntiedtke_timestep_final
+         USR           780           480     0.87     0.0        1818.96  mpas_atmphys_driver_convection::convection_to_mpas
+         USR           780           480     0.14     0.0         294.89  mpas_atmphys_driver_convection::deallocate_convection
+         USR           780           480     0.00     0.0           8.58  mpas_atmphys_driver_convection::update_convection_step2
+         USR           780           480     0.00     0.0           9.30  mpas_atmphys_interface::deallocate_forall_physics
+         COM           780           480     0.01     0.0          12.67  atm_time_integration::atm_timestep
+         COM           780           480     1.94     0.0        4037.66  atm_time_integration::atm_srk3
+         USR           780           480     2.04     0.0        4258.98  atm_time_integration::atm_rk_integration_setup
+         USR           780           480     1.88     0.0        3915.15  atm_time_integration::atm_compute_moist_coefficients
+         COM           780           480     0.50     0.0        1038.34  mpas_atmphys_todynamics::physics_get_tend
+         COM           780           480     2.10     0.0        4366.85  mpas_atmphys_todynamics::physics_get_tend_work
+         COM           780           480     0.02     0.0          45.09  atm_time_integration::atm_advance_scalars_mono
+         COM           780           480     0.00     0.0           5.76  mpas_field_routines::mpas_allocate_scratch_field3d_real
+         COM           780           480    37.56     0.3       78251.08  atm_time_integration::atm_advance_scalars_mono_work
+         USR           780           480     0.00     0.0           6.44  mpas_field_routines::mpas_deallocate_scratch_field3d_real
+         COM           780           480     0.02     0.0          38.08  mpas_atmphys_driver_microphysics::driver_microphysics
+         USR           780           480     0.00     0.0          10.19  mpas_atmphys_driver_microphysics::allocate_microphysics
+         USR           780           480     0.01     0.0          24.55  mpas_atmphys_driver_microphysics::precip_from_mpas
+         USR           780           480     4.78     0.0        9962.88  mpas_atmphys_interface::microphysics_from_mpas
+         USR           780           480     5.61     0.0       11693.58  module_mp_wsm6::wsm6
+         USR           780           480   212.21     1.6      442102.15  mp_wsm6::mp_wsm6_run
+         USR           780           480     0.00     0.0           8.24  mp_wsm6_effectrad::mp_wsm6_effectrad_run
+         USR           780           480     0.42     0.0         877.08  mpas_atmphys_driver_microphysics::precip_to_mpas
+         USR           780           480     8.66     0.1       18034.68  mpas_atmphys_interface::microphysics_to_mpas
+         USR           780           480     0.15     0.0         315.69  mpas_atmphys_driver_microphysics::deallocate_microphysics
+         COM           780           480     0.46     0.0         960.36  atm_time_integration::summarize_timestep
+         USR           780           480     0.01     0.0          15.17  mpas_pool_routines::mpas_pool_shift_time_levels
+         COM           780           480     0.00     0.0           5.06  mpas_timekeeping::mpas_advance_clock
+         USR           780           480     0.00     0.0           2.70  esmf_clockmod::esmf_clockadvance
+         COM           728           448     0.00     0.0           3.84  mpas_dmpar::mpas_dmpar_bcast_logical
+         OMP           702           432     0.00     0.0           4.22  !$omp do @mpas_dmpar.F:8470
+         OMP           702           432     0.00     0.0           1.16  !$omp implicit barrier @mpas_dmpar.F:8497
+         USR           702           432     0.00     0.0           5.21  mpas_dmpar::mpas_dmpar_destroy_exchange_list
+         COM           702           432     0.00     0.0           3.51  mpas_io::mpas_io_get_var_real2d
+         COM           702           432     0.00     0.0           4.53  smiolf::smiolf_get_var_2d_real32
+         COM           702           432     0.00     0.0           2.16  mpas_dmpar::mpas_dmpar_exch_group_pack_buffer_field1d_integer
+         COM           702           432     0.00     0.0           2.16  mpas_dmpar::mpas_dmpar_exch_group_local_exch_field1d_integer
+         USR           676           416     0.00     0.0           3.44  ezxml_char_content
+         USR           676           416     0.00     0.0           2.57  mpas_atmphys_date_time::get_julgmt
+         USR           676           416     0.00     0.0           6.95  mpas_atmphys_date_time::split_date_char
+         MPI           650           400     0.92     0.0        2300.74  MPI_Comm_free
+         USR           650           400     0.00     0.0           7.31  mpas_stream_manager::mpas_stream_mgr_add_att_int
+         USR           624           384     0.00     0.0           3.49  mpas_pool_routines::mpas_pool_add_field_2d_reals
+         MPI           600             6     0.26     0.0       43417.52  MPI_File_write_at
+         MPI           598           368     0.00     0.0           1.68  MPI_Comm_size
+         USR           572           352     0.00     0.0           3.55  mpas_pool_routines::mpas_pool_add_field_2d_int
+         OMP           546           336     0.00     0.0          10.14  !$omp do @mpas_dmpar.F:8539
+         OMP           546           336     0.00     0.0           1.18  !$omp implicit barrier @mpas_dmpar.F:8569
+         USR           546           336     0.00     0.0           3.80  mpas_field_routines::mpas_deallocate_field2d_integer
+         USR           546           336     0.00     0.0           5.54  mpas_field_routines::mpas_deallocate_field2d_integer_target
+         USR           546           336     0.00     0.0           1.47  mpas_stream_list::mpas_stream_list_create
+         COM           546           336     0.00     0.0           2.30  mpas_dmpar::mpas_dmpar_exch_group_pack_buffer_field2d_integer
+         COM           546           336     0.00     0.0           2.12  mpas_dmpar::mpas_dmpar_exch_group_local_exch_field2d_integer
+         USR           520           320     0.00     0.0           2.49  ezxml_open_tag
+         USR           520           320     0.00     0.0           1.28  ezxml_close_tag
+         COM           494           304     0.00     0.0           2.55  mpas_io::mpas_io_inq_dim
+         USR           494           304     0.00     0.0           1.17  mpas_stream_list::mpas_stream_list_insert
+         USR           494           304     0.00     0.0           4.36  esmf_timeintervalmod::timeintcmp
+         USR           494           304     0.00     0.0           3.25  mpas_halo::mpas_halo_exch_group_create
+         COM           494           304     0.02     0.0          53.40  mpas_halo::mpas_halo_exch_group_complete
+         USR           494           304     0.00     0.0           3.50  mpas_halo::mpas_halo_aggregate_group_info
+         USR           494           304     0.00     0.0           2.14  mpas_pool_routines::mpas_pool_remove_subpool
+         USR           494           304     0.01     0.0          18.63  mpas_halo::refactor_lists
+         USR           494           304     0.00     0.0           5.91  mpas_halo::mpas_halo_exch_group_destroy
+         USR           494           304     0.01     0.0          33.36  mpas_field_routines::mpas_deallocate_field3d_real_target
+         USR           468           288     0.00     0.0           2.37  ezxml_add_child
+         USR           468           288     0.00     0.0           1.14  ezxml_insert
+         USR           468           288     0.00     0.0           1.11  ezxml_set_flag
+         USR           468           288    12.47     0.1       43298.47  sort_triplet_array
+         USR           468           288     0.00     0.0           2.64  mpas_dmpar::mpas_dmpar_init_multihalo_exchange_list
+         USR           468           288     0.00     0.0           2.53  mpas_timekeeping::sub_t_ti
+         USR           468           288     0.00     0.0           4.46  esmf_timemod::esmf_timedec
+         COM           468           288     0.00     0.0           3.97  smiolf::smiolf_define_dim
+         COM           468           288     0.00     0.0           4.82  SMIOL_define_dim
+         USR           442           272     0.00     0.0           2.56  mpas_timekeeping::eq_t_t
+         USR           442           272     0.00     0.0           2.33  esmf_timemod::esmf_timeeq
+         USR           442           272     0.00     0.0           1.36  mpas_stream_list::mpas_stream_list_destroy
+         USR           416           256     0.00     0.0           8.95  mpas_timekeeping::mpas_interval_division
+         USR           416           256     0.00     0.0           2.52  mpas_timekeeping::eq_ti_ti
+         USR           416           256     0.00     0.0           2.46  esmf_timeintervalmod::esmf_timeintervaleq
+         USR           416           256     0.00     0.0           1.25  mpas_io::mpas_io_handle_dminfo
+         MPI           414            96     2.64     0.0       27525.20  MPI_File_open
+         MPI           408            96     0.00     0.0           8.58  MPI_Gather
+         OMP           390           240     0.01     0.0          57.49  !$omp do @mpas_dmpar.F:8825
+         OMP           390           240     0.00     0.0           1.39  !$omp implicit barrier @mpas_dmpar.F:8857
+         OMP           390           240     0.00     0.0           1.24  !$omp barrier @mpas_timekeeping.F:981
+         USR           390           240     0.00     0.0           1.27  parse_xml_tag
+         COM           390           240     0.00     0.0           3.02  mpas_io::mpas_io_get_var_int1d
+         COM           390           240     0.00     0.0           4.47  smiolf::smiolf_get_var_1d_int32
+         USR           390           240     0.00     0.0           1.43  smiolf::c_loc_assumed_shape_1d_int32
+         COM           390           240     0.02     0.0         100.50  mpas_dmpar::mpas_dmpar_alltoall_field2d_integer
+         COM           390           240     0.00     0.0           2.61  mpas_dmpar::mpas_dmpar_exch_group_pack_buffer_field3d_real
+         COM           390           240     0.00     0.0           2.26  mpas_dmpar::mpas_dmpar_exch_group_local_exch_field3d_real
+         COM           390           240     0.00     0.0           8.70  mpas_timekeeping::mpas_reset_clock_alarm
+         USR           364           224     0.00     0.0          15.45  mpas_timekeeping::mpas_set_time
+         USR           364           224     0.00     0.0           5.43  esmf_timemod::esmf_timeset
+         USR           364           224     0.00     0.0           1.46  esmf_stubs::esmf_isinitialized
+         USR           364           224     0.00     0.0           2.77  esmf_timemod::timeaddmonths
+         USR           364           224     0.00     0.0           2.55  esmf_calendarmod::nsecondsinyearmonth
+         USR           364           224     0.00     0.0           1.11  parse_xml_tag_name
+         COM           338           208     0.00     0.0           2.65  mpas_io::mpas_io_get_var_int2d
+         COM           338           208     0.00     0.0           4.51  smiolf::smiolf_get_var_2d_int32
+         USR           338           208     0.00     0.0           1.17  smiolf::c_loc_assumed_shape_2d_int32
+         USR           338           208     0.00     0.0           2.60  mpas_timekeeping::mpas_alarm_interval
+         USR           338           208     0.02     0.0         113.22  mp_wsm6::rgmma
+         USR           338           208     0.00     0.0           3.37  mpas_pool_routines::mpas_pool_remove_dimension
+         USR           338           208     0.00     0.0           3.32  mpas_field_routines::mpas_deallocate_field3d_real
+         MPI           312           192    92.55     0.7      482047.51  MPI_Comm_split
+         USR           312           192     0.00     0.0           4.46  mpas_pool_routines::mpas_pool_add_package
+         USR           312           192     0.00     0.0           2.37  mpas_stream_manager::mpas_stream_mgr_get_property_int
+         COM           312           192     1.62     0.0        8416.76  mpas_block_creator::mpas_block_creator_allocate_pool_fields
+         COM           312           192     0.03     0.0         147.45  mpas_pool_routines::mpas_pool_link_pools
+         COM           312           192     0.04     0.0         196.36  mpas_pool_routines::mpas_pool_link_parinfo
+         USR           312           192     0.00     0.0           2.44  mp_radar::wgamma
+         USR           312           192     0.00     0.0           1.15  mp_radar::gammln
+         MPI           300             3     0.03     0.0        9141.81  MPI_File_read_at
+         MPI           300            48     1.08     0.0       22549.12  MPI_File_write_at_all
+         COM           286           176    12.11     0.1       68780.38  mpas_dmpar::mpas_dmpar_get_exch_list
+         USR           286           176     0.00     0.0           3.82  mpas_field_routines::mpas_deallocate_field0d_integer
+         USR           286           176     0.00     0.0           2.58  mpas_field_routines::mpas_deallocate_field0d_integer_target
+         COM           286           176     0.00     0.0          16.05  mpas_io_streams::mpas_streamaddfield_1dinteger
+         USR           286           176     0.00     0.0           1.38  mpas_stream_list::mpas_stream_list_remove
+         OMP           261            48     0.00     0.0           4.39  !$omp parallel @mpas_atmphys_driver.F:206
+         OMP           261            48     0.00     0.0           3.24  !$omp parallel @mpas_atmphys_driver.F:218
+         OMP           261            48     0.00     0.0           3.33  !$omp parallel @mpas_atmphys_driver.F:231
+         USR           260            85     0.00     0.0          10.37  mpas_io_units::mpas_new_unit
+         USR           260           160     0.00     0.0          11.19  mpas_timekeeping::mpas_expand_string
+         COM           260           160     0.14     0.0         851.49  mpas_io::mpas_io_open
+         USR           260           160     0.00     0.0           6.40  mpas_stream_manager::parse_package_list
+         MPI           258            96   577.50     4.5     6015629.25  MPI_File_close
+         USR           234            54     0.00     0.0           5.43  mpas_io_units::mpas_release_unit
+         USR           234           144     0.00     0.0          10.39  mpas_dmpar::mpas_dmpar_destroy_mulithalo_exchange_list
+         COM           234           144     0.00     0.0           5.50  mpas_stream_manager::mpas_stream_mgr_set_property_int
+         COM           234           144     0.00     0.0           4.70  mpas_io_streams::mpas_streamaddfield_0dchar
+         COM           234            39     0.00     0.0           3.62  mpas_atmphys_utilities::physics_message
+         MPI           208           128     0.01     0.0          72.89  MPI_Comm_dup
+         OMP           208           128     0.00     0.0           1.24  !$omp barrier @mpas_timekeeping.F:562
+         USR           208           128     0.00     0.0           3.53  mpas_pool_routines::mpas_pool_add_field_0d_real
+         COM           208           128     0.00     0.0           5.59  mpas_timekeeping::mpas_add_clock_alarm
+         COM           208           128     0.00     0.0           9.99  mpas_io_streams::mpas_streamaddfield_2dinteger
+         MPI           204            48     0.13     0.0        2680.50  MPI_Barrier
+         USR           182           112     0.00     0.0          16.08  mpas_stream_manager::mpas_stream_mgr_create_stream
+         USR           182           112     0.02     0.0         216.32  mpas_pool_routines::mpas_pool_clone_pool
+         USR           182           112     0.00     0.0           1.14  extract_stream_interval
+         COM           182           112     0.00     0.0          15.80  stream_mgr_add_alarm_c
+         USR           182           112     0.00     0.0           8.10  esmf_timeintervalmod::esmfold_timeintervalgetstring
+         USR           182           112     0.00     0.0           1.24  esmf_timeintervalmod::signnormtimeint
+         COM           182           112     0.00     0.0          14.98  mpas_stream_manager::mpas_stream_mgr_destroy_stream
+         MPI           156            96     0.01     0.0         139.43  MPI_Comm_split_type
+         MPI           156            96     0.00     0.0          14.12  MPI_File_get_info
+         USR           156            96     0.00     0.0          11.26  attribute_check
+         COM           156            96     0.05     0.0         511.27  smiolf::smiolf_open_file
+         COM           156            96     0.12     0.0        1276.23  SMIOL_open_file
+         COM           156            96     0.00     0.0           7.37  smiolf::smiolf_create_decomp
+         COM           156            96     0.02     0.0         161.66  SMIOL_create_decomp
+         USR           156            96     0.00     0.0           1.35  get_io_elements
+         COM           156            96     0.00     0.0           7.17  aggregate_list
+         COM           156            96     4.36     0.0       45367.37  build_exchange
+         USR           156            96     4.72     0.0       49206.23  mpas_block_decomp::mpas_block_decomp_all_edges_in_block
+         USR           156            96     0.00     0.0           3.61  mpas_pool_routines::mpas_pool_add_field_3d_reals
+         COM           156            96     0.01     0.0          58.16  mpas_io::mpas_io_close
+         COM           156            96     0.00     0.0           3.71  smiolf::smiolf_close_file
+         COM           156            96     0.03     0.0         281.74  SMIOL_close_file
+         COM           156            96     0.00     0.0          12.02  stream_mgr_create_stream_c
+         COM           156            96     0.00     0.0          19.72  mpas_io_streams::mpas_streamaddfield_3dreal
+         COM           156            96     0.00     0.0           3.54  mpas_io::mpas_io_put_var_char0d
+         COM           156            96     0.00     0.0           3.93  smiolf::smiolf_put_var_0d_char
+         COM           156            96     0.00     0.0           2.74  mpas_io::mpas_io_put_var_real2d
+         COM           156            96     0.00     0.0           3.75  smiolf::smiolf_put_var_2d_real32
+         COM           156            96     0.00     0.0           2.87  smiolf::smiolf_free_decomp
+         COM           156            96     0.00     0.0           2.86  SMIOL_free_decomp
+         USR           130            80     0.00     0.0           1.13  pop_tag
+         COM           130            80     0.00     0.0          49.24  mpas_dmpar::mpas_dmpar_alltoall_field1d_integer
+         USR           130            80     0.00     0.0           6.31  mpas_stream_manager::mpas_get_stream_filename
+         USR           130            80     0.00     0.0           1.45  mpas_io::mpas_io_set_frame
+         COM           130            80     0.00     0.0           4.16  mpas_io::mpas_io_get_var_real3d
+         COM           130            80     0.00     0.0           5.79  smiolf::smiolf_get_var_3d_real32
+         USR           130            80     0.00     0.0           1.30  smiolf::c_loc_assumed_shape_3d_real32
+         USR           130            80     0.01     0.0         149.81  mpas_timer::mpas_timer_destroy_children
+         USR           130            80     0.00     0.0           3.55  mpas_field_routines::mpas_deallocate_field0d_char_target
+         USR           104            64     0.00     0.0           1.14  push_tag
+         USR           104            64     0.00     0.0           3.62  mpas_pool_routines::mpas_pool_add_field_0d_chars
+         USR           104            64     0.00     0.0           3.62  mpas_pool_routines::mpas_pool_add_field_0d_int
+         COM           104            64     0.00     0.0           5.68  mpas_stream_manager::mpas_stream_mgr_set_property_logical
+         COM           104            64     0.00     0.0           6.26  mpas_stream_manager::mpas_stream_mgr_set_property_char
+         USR           104            64     0.00     0.0           1.34  mpas_stream_manager::mpas_stream_mgr_get_clock
+         USR           104            64     0.00     0.0          14.24  mpas_stream_manager::mpas_stream_mgr_add_alarm
+         USR           104            64     0.00     0.0           1.51  mpas_timekeeping::mpas_is_alarm_defined
+         COM           104            64     0.00     0.0           6.85  mpas_io_streams::mpas_createstream
+         COM           104            64     0.08     0.0        1269.47  mpas_stream_manager::build_stream
+         COM           104            64     0.00     0.0           4.22  mpas_io_streams::mpas_streamaddfield_0dreal
+         COM           104            64     0.00     0.0           5.74  mpas_io::mpas_io_get_var_char0d
+         COM           104            64     0.00     0.0           3.16  smiolf::smiolf_get_var_0d_char
+         USR           104            64     0.00     0.0           1.68  mpas_c_interfacing::mpas_sanitize_string
+         USR           104            64     0.02     0.0         304.13  mpas_field_routines::mpas_duplicate_field2d_real
+         COM           104            64     0.00     0.0          14.24  mpas_io_streams::mpas_closestream
+         USR           104            64     0.00     0.0           4.69  mpas_field_routines::mpas_deallocate_field0d_real
+         USR           104            64     0.00     0.0           3.57  mpas_field_routines::mpas_deallocate_field0d_real_target
+         OMP            87            16     0.00     0.0          40.71  !$omp parallel @mpas_atm_threading.F:67
+         OMP            87            16     0.00     0.0           3.01  !$omp parallel @mpas_atm_threading.F:97
+         OMP            87            16     0.00     0.0           3.72  !$omp parallel @mpas_atm_core.F:483
+         MPI            78            48    11.60     0.1      241702.64  MPI_File_sync
+         OMP            78            48     0.00     0.0          10.05  !$omp single @mpas_atmphys_driver_radiation_sw.F:748
+         OMP            78            48     0.00     0.0           7.53  !$omp single sblock @mpas_atmphys_driver_radiation_sw.F:748
+         OMP            78            48     0.00     0.0           2.43  !$omp implicit barrier @mpas_atmphys_driver_radiation_sw.F:760
+         OMP            78            48     0.00     0.0           7.92  !$omp do @mpas_atmphys_driver.F:206
+         OMP            78            48     0.00     0.0           2.48  !$omp implicit barrier @mpas_atmphys_driver.F:211
+         OMP            78            48     0.00     0.0           6.83  !$omp do @mpas_atmphys_driver.F:218
+         OMP            78            48     0.00     0.0           2.35  !$omp implicit barrier @mpas_atmphys_driver.F:224
+         OMP            78            48     0.00     0.0           6.89  !$omp do @mpas_atmphys_driver.F:231
+         OMP            78            48     0.00     0.0           2.54  !$omp implicit barrier @mpas_atmphys_driver.F:237
+         USR            78            48     0.00     0.0           2.93  mpas_dmpar::mpas_dmpar_get_index_range
+         USR            78            48     0.00     0.0          67.20  mpas_sort::mpas_quicksort_1dint
+         COM            78            48     0.00     0.0           4.12  build_stream_path
+         USR            78            48     0.00     0.0           4.00  mpas_timekeeping::gt_t_t
+         USR            78            48     0.00     0.0           4.24  esmf_timemod::esmf_timegt
+         USR            78            48     0.00     0.0           3.56  mpas_timekeeping::lt_t_t
+         USR            78            48     0.00     0.0           2.31  esmf_timemod::esmf_timelt
+         COM            78            48     0.00     0.0           2.52  mpas_io::mpas_io_get_var_real0d
+         COM            78            48     0.00     0.0           2.54  smiolf::smiolf_get_var_0d_real32
+         COM            78            48     0.01     0.0         122.83  mpas_atm_diagnostics_utils::mpas_stream_inclusion_count
+         USR            78            48     0.04     0.0         847.39  atm_core::atm_compute_output_diagnostics
+         COM            78            48     0.86     0.0       17852.54  mpas_isobaric_diagnostics::interp_diagnostics
+         COM            78            48     0.00     0.0          93.43  mpas_dmpar::mpas_dmpar_exch_halo_field2d_real
+         USR            78            48     0.00     0.0           7.73  mpas_dmpar::mpas_dmpar_build_comm_lists
+         USR            78            48     0.03     0.0         607.33  mpas_isobaric_diagnostics::compute_slp
+         USR            78            48     0.01     0.0         304.32  mpas_isobaric_diagnostics::compute_layer_mean
+         USR            78            48     0.00     0.0          16.74  mpas_stream_manager::mpas_build_stream_filename
+         USR            78            48     0.00     0.0           4.39  mpas_timekeeping::ge_t_t
+         USR            78            48     0.00     0.0           3.81  mpas_timekeeping::ne_ti_ti
+         USR            78            48     0.00     0.0           2.22  esmf_timeintervalmod::esmf_timeintervalne
+         USR            78            48     0.00     0.0           3.62  gen_random
+         COM            78            48     0.01     0.0         224.50  mpas_stream_manager::prewrite_reindex
+         COM            78            48     0.04     0.0         876.50  mpas_io_streams::mpas_writestream
+         USR            78            48     0.00     0.0           1.23  mpas_io::mpas_io_would_clobber_records
+         COM            78            48     0.00     0.0           4.95  mpas_io::mpas_io_sync
+         COM            78            48     0.00     0.0           3.99  smiolf::smiolf_sync_file
+         COM            78            48     0.42     0.0        8794.63  SMIOL_sync_file
+         USR            78            48     0.00     0.0           5.05  mpas_stream_manager::postwrite_reindex
+         USR            78            48     0.08     0.0        1756.21  mpas_atmphys_o3climatology::o3climatology_from_mpas
+         USR            78            48     0.00     0.0           4.09  module_ra_cam_support::getfactors
+         USR            78            48     0.00     0.0           1.69  module_ra_cam_support::validfactors
+         USR            78            48     0.00     0.0          16.05  mpas_atmphys_driver_cloudiness::allocate_cloudiness
+         COM            78            48     0.00     0.0          25.07  mpas_atmphys_driver_cloudiness::driver_cloudiness
+         USR            78            48     0.04     0.0         892.51  mpas_atmphys_driver_cloudiness::cloudiness_from_mpas
+         USR            78            48     0.20     0.0        4069.04  mpas_atmphys_driver_cloudiness::calc_cldfraction
+         USR            78            48     0.01     0.0         257.48  mpas_atmphys_driver_cloudiness::cloudiness_to_mpas
+         USR            78            48     0.00     0.0          58.64  mpas_atmphys_driver_radiation_sw::allocate_radiation_sw
+         COM            78            48     0.00     0.0          27.88  mpas_atmphys_driver_radiation_sw::driver_radiation_sw
+         USR            78            48     0.10     0.0        2067.21  mpas_atmphys_driver_radiation_sw::radiation_sw_from_mpas
+         USR            78            48     0.00     0.0           3.55  mpas_atmphys_driver_radiation_sw::radconst
+         USR            78            48     1.45     0.0       30168.73  module_ra_rrtmg_sw::rrtmg_swrad
+         USR            78            48     0.01     0.0         294.62  mpas_atmphys_driver_radiation_sw::radiation_sw_to_mpas
+         USR            78            48     0.00     0.0          37.22  mpas_atmphys_driver_radiation_lw::allocate_radiation_lw
+         COM            78            48     0.00     0.0          26.09  mpas_atmphys_driver_radiation_lw::driver_radiation_lw
+         USR            78            48     0.17     0.0        3476.80  mpas_atmphys_driver_radiation_lw::radiation_lw_from_mpas
+         USR            78            48     3.56     0.0       74098.24  module_ra_rrtmg_lw::rrtmg_lwrad
+         USR            78            48     0.06     0.0        1195.29  mpas_atmphys_driver_radiation_lw::radiation_lw_to_mpas
+         USR            78            48     0.00     0.0           4.56  mpas_timekeeping::mul_ti_n8
+         USR            78            48     0.00     0.0           4.27  esmf_timeintervalmod::esmf_timeintervalprodi8
+         COM            52            32     0.03     0.0         814.12  par_read
+         USR            52            32     0.00     0.0         100.73  ezxml_parse_str
+         USR            52            32     0.00     0.0           1.89  ezxml_new
+         USR            52            32     0.00     0.0           1.38  ezxml_str2utf8
+         COM            52            32     0.00     0.0           4.53  mpas_dmpar::mpas_dmpar_bcast_ints
+         COM            52            32     0.00     0.0           8.24  mpas_dmpar::mpas_dmpar_scatter_ints
+         COM            52            32     0.00     0.0         107.95  mpas_block_creator::mpas_block_creator_build_0_and_1halo_edge_fields
+         USR            52            32     0.39     0.0       12193.16  mpas_block_decomp::mpas_block_decomp_partitioned_edge_list
+         USR            52            32     1.34     0.0       41955.21  mpas_block_decomp::mpas_block_decomp_add_halo
+         COM            52            32     0.97     0.0       30370.60  mpas_block_creator::mpas_block_creator_build_edge_halos
+         USR            52            32     0.00     0.0           3.70  mpas_pool_routines::mpas_pool_add_field_0d_char
+         USR            52            32     0.00     0.0           7.61  mpas_stream_manager::mpas_stream_mgr_add_att_logical
+         COM            52            32     0.00     0.0          12.29  mpas_stream_manager::mpas_stream_mgr_read
+         COM            52            32     0.00     0.0          39.79  mpas_stream_manager::read_stream
+         COM            52            32     0.00     0.0           5.08  mpas_io_streams::mpas_streamaddfield_0dinteger
+         COM            52            32     0.00     0.0           3.03  mpas_io::mpas_io_get_var_int0d
+         COM            52            32     0.00     0.0           2.70  smiolf::smiolf_get_var_0d_int32
+         USR            52            32     0.05     0.0        1522.81  mpas_field_routines::mpas_duplicate_field3d_real
+         USR            52            32     0.00     0.0           3.52  mpas_field_routines::mpas_duplicate_field0d_char
+         USR            52            32     0.00     0.0          43.23  mpas_atmphys_date_time::monthly_interp_to_date
+         USR            52            32     0.19     0.0        5826.08  mpas_atmphys_driver_microphysics::compute_radar_reflectivity
+         USR            52            32     8.30     0.1      259425.60  mpas_atmphys_driver_microphysics::compute_relhum
+         USR            52            32     0.00     0.0           5.25  atm_core::atm_reset_diagnostics
+      SCOREP            41            16     0.17     0.0       10587.49  atmosphere_model
+         COM            26            16     0.00     0.0          90.52  mpas
+         COM            26            16     0.01     0.0         858.32  mpas_subdriver::mpas_init
+         COM            26            16     0.00     0.0           9.58  mpas_subdriver::mpas_run
+         COM            26            16     0.00     0.0          59.28  mpas_subdriver::mpas_finalize
+         COM            26            16     0.01     0.0         388.76  mpas_subdriver::add_stream_attributes
+         MPI            26            16     0.00     0.0         246.93  MPI_Finalize
+         MPI            26            16    38.20     0.3     2387214.88  MPI_Init_thread
+         OMP            26            16     0.00     0.0           8.58  !$omp implicit barrier @mpas_atm_threading.F:71
+         OMP            26            16     0.00     0.0          13.57  !$omp master @mpas_atm_threading.F:68
+         OMP            26            16     0.00     0.0           2.00  !$omp implicit barrier @mpas_atm_threading.F:112
+         OMP            26            16     0.00     0.0           9.50  !$omp barrier @mpas_timekeeping.F:217
+         OMP            26            16     0.00     0.0           3.35  !$omp barrier @mpas_timekeeping.F:248
+         OMP            26            16     0.00     0.0           1.52  !$omp barrier @mpas_timekeeping.F:1051
+         OMP            26            16     0.00     0.0           7.19  !$omp barrier @mpas_atm_time_integration.F:5517
+         OMP            26            16     0.00     0.0           5.64  !$omp barrier @mpas_atm_time_integration.F:5527
+         OMP            26            16     0.00     0.0          43.27  !$omp do @mpas_atm_core.F:483
+         OMP            26            16     0.00     0.0           4.42  !$omp implicit barrier @mpas_atm_core.F:500
+         USR            26            16     0.00     0.0          30.07  mpas_domain_routines::mpas_allocate_domain
+         COM            26            16     0.00     0.0           8.30  mpas_framework::mpas_framework_init_phase1
+         COM            26            16     0.30     0.0       18747.30  mpas_dmpar::mpas_dmpar_init
+         USR            26            16     0.00     0.0           5.86  atm_core_interface::atm_setup_core
+         USR            26            16     0.00     0.0           1.84  atm_core_interface::atm_setup_domain
+         COM            26            16     0.00     0.0          84.94  atm_core_interface::atm_setup_log
+         USR            26            16     2.03     0.0      126931.72  mpas_log::mpas_log_init
+         USR            26            16     0.04     0.0        2575.49  mpas_log::mpas_log_open
+         COM            26            16     0.02     0.0        1524.55  atm_core_interface::atm_setup_namelists
+         COM            26            16     0.08     0.0        5221.78  atm_core_interface::atm_setup_nmlrec_nhyd_model
+         COM            26            16     0.00     0.0          18.67  atm_core_interface::atm_setup_nmlrec_damping
+         COM            26            16     0.00     0.0           5.35  atm_core_interface::atm_setup_nmlrec_limited_area
+         COM            26            16     0.00     0.0          10.21  atm_core_interface::atm_setup_nmlrec_io
+         COM            26            16     0.00     0.0          12.22  atm_core_interface::atm_setup_nmlrec_decomposition
+         COM            26            16     0.00     0.0           8.15  atm_core_interface::atm_setup_nmlrec_restart
+         COM            26            16     0.00     0.0          10.09  atm_core_interface::atm_setup_nmlrec_printout
+         COM            26            16     0.00     0.0           8.03  atm_core_interface::atm_setup_nmlrec_iau
+         COM            26            16     0.00     0.0          14.18  atm_core_interface::atm_setup_nmlrec_assimilation
+         COM            26            16     0.00     0.0          21.26  atm_core_interface::atm_setup_nmlrec_development
+         COM            26            16     0.00     0.0         102.11  atm_core_interface::atm_setup_nmlrec_physics
+         COM            26            16     0.00     0.0           8.22  atm_core_interface::atm_setup_nmlrec_soundings
+         COM            26            16     0.00     0.0          48.34  mpas_framework::mpas_framework_init_phase2
+         USR            26            16     0.00     0.0           1.66  mpas_timer::mpas_timer_init
+         USR            26            16     0.00     0.0          13.31  mpas_timekeeping::mpas_timekeeping_init
+         USR            26            16     0.00     0.0          20.35  esmf_stubs::esmf_initialize
+         USR            26            16     0.00     0.0           2.07  esmf_calendarmod::initdaym
+         COM            26            16     0.00     0.0          33.84  mpas_io::mpas_io_init
+         COM            26            16     0.00     0.0          10.33  smiolf::smiolf_init
+         COM            26            16     0.00     0.0           8.08  SMIOL_fortran_init
+         COM            26            16     0.00     0.0          11.16  SMIOL_init
+         USR            26            16     0.00     0.0          42.87  atm_core_interface::atm_define_packages
+         COM            26            16     0.00     0.0          34.67  atm_core_interface::atm_setup_packages
+         COM            26            16     0.00     0.0          54.15  mpas_atmphys_control::physics_namelist_check
+         COM            26            16     0.00     0.0          29.53  mpas_atmphys_packages::atmphys_setup_packages
+         USR            26            16     0.00     0.0          15.99  atm_core_interface::atm_setup_decompositions
+         USR            26            16     0.00     0.0           1.64  mpas_decomp::mpas_decomp_create_decomp_list
+         USR            26            16     0.00     0.0           1.67  mpas_decomp::mpas_decomp_register_method
+         COM            26            16     0.00     0.0          26.99  atm_core_interface::atm_setup_clock
+         COM            26            16     0.00     0.0          32.21  atm_core::atm_simulation_clock_init
+         COM            26            16     0.01     0.0         481.20  mpas_timekeeping::mpas_create_clock
+         USR            26            16     0.00     0.0           6.26  esmf_clockmod::esmf_clockcreate
+         USR            26            16     0.00     0.0           8.66  esmf_clockmod::esmf_clocksetold
+         USR            26            16     0.00     0.0           9.86  atm_core_interface::atm_get_mesh_stream
+         COM            26            16     0.00     0.0          46.91  xml_stream_get_attributes
+         USR            26            16     0.00     0.0          86.80  xml_syntax_check
+         USR            26            16     0.01     0.0         556.54  check_streams
+         COM            26            16     0.00     0.0         251.95  mpas_bootstrapping::mpas_bootstrap_framework_phase1
+         COM            26            16     0.00     0.0          63.50  mpas_bootstrapping::mpas_io_setup_cell_block_fields
+         COM            26            16     0.00     0.0          19.00  mpas_bootstrapping::mpas_io_setup_edge_block_fields
+         COM            26            16     0.00     0.0          16.01  mpas_bootstrapping::mpas_io_setup_vertex_block_fields
+         COM            26            16     0.26     0.0       16349.56  mpas_block_decomp::mpas_block_decomp_cells_for_proc
+         USR            26            16     0.00     0.0           1.52  mpas_block_decomp::mpas_build_block_proc_list
+         USR            26            16     0.00     0.0           1.44  mpas_block_decomp::mpas_get_blocks_per_proc
+         USR            26            16     0.00     0.0          14.46  mpas_block_creator::mpas_block_creator_setup_blocks_and_0halo_cells
+         COM            26            16     0.00     0.0          36.96  mpas_block_creator::mpas_block_creator_build_0halo_cell_fields
+         COM            26            16     0.01     0.0         458.63  mpas_block_creator::mpas_block_creator_build_cell_halos
+         COM            26            16     0.00     0.0           6.99  mpas_io::mpas_io_get_att_real0d
+         COM            26            16     0.00     0.0           3.97  smiolf::smiolf_inquire_att_float
+         USR            26            16     0.00     0.0         115.75  mpas_block_creator::mpas_block_creator_finalize_block_phase1
+         USR            26            16     0.00     0.0           6.17  mpas_domain_routines::mpas_allocate_block
+         USR            26            16     0.00     0.0          21.05  atm_core_interface::atm_setup_block
+         USR            26            16     0.00     0.0          75.69  atm_core_interface::atm_generate_structs
+         USR            26            16     0.01     0.0         513.89  atm_core_interface::atm_generate_pool_mesh
+         USR            26            16     0.01     0.0         349.75  atm_core_interface::atm_generate_pool_state
+         USR            26            16     0.02     0.0        1043.21  atm_core_interface::atm_generate_pool_diag
+         USR            26            16     0.00     0.0         146.49  atm_core_interface::atm_generate_pool_tend
+         USR            26            16     0.00     0.0         189.81  atm_core_interface::atm_generate_pool_lbc
+         USR            26            16     0.00     0.0          29.02  atm_core_interface::atm_generate_pool_halo_scratch
+         USR            26            16     0.02     0.0        1248.23  atm_core_interface::atm_generate_pool_diag_physics
+         USR            26            16     0.00     0.0         177.88  atm_core_interface::atm_generate_pool_tend_physics
+         USR            26            16     0.00     0.0          33.80  atm_core_interface::atm_generate_pool_atm_input
+         USR            26            16     0.00     0.0         250.82  atm_core_interface::atm_generate_pool_sfc_input
+         USR            26            16     0.00     0.0          85.49  atm_core_interface::atm_generate_pool_tend_iau
+         USR            26            16     0.00     0.0          27.20  mpas_stream_manager::mpas_stream_mgr_init
+         USR            26            16     0.00     0.0          13.76  seed_random
+         COM            26            16     0.01     0.0         513.54  atm_core_interface::atm_setup_immutable_streams
+         COM            26            16     0.00     0.0          52.37  mpas_stream_manager::mpas_stream_mgr_add_pool
+         COM            26            16     1.75     0.0      109186.10  xml_stream_parser
+         USR            26            16     0.00     0.0          10.14  stream_mgr_add_pkg_c
+         USR            26            16     0.00     0.0           5.85  mpas_stream_manager::mpas_stream_mgr_add_pkg
+         COM            26            16     0.00     0.0          29.73  mpas_timekeeping::mpas_adjust_alarm_to_reference_time
+         USR            26            16     0.00     0.0           6.52  mpas_timekeeping::sub_ti_ti
+         USR            26            16     0.00     0.0           9.91  esmf_timeintervalmod::esmf_timeintervaldiff
+         COM            26            16     0.00     0.0          33.37  mpas_stream_manager::mpas_stream_mgr_validate_streams
+         COM            26            16     0.03     0.0        1722.92  mpas_bootstrapping::mpas_bootstrap_framework_phase2
+         COM            26            16     0.00     0.0         176.44  mpas_block_creator::mpas_block_creator_finalize_block_phase2
+         COM            26            16     0.00     0.0           7.36  atm_core_interface::atm_setup_decomposed_dimensions
+         COM            26            16     0.00     0.0          76.86  atm_core_interface::atm_setup_derived_dimensions
+         COM            26            16     0.00     0.0          29.06  mpas_domain_routines::mpas_link_fields
+         COM            26            16     0.00     0.0         198.94  atm_core::atm_core_init
+         COM            26            16     0.84     0.0       52323.15  mpas_atm_threading::mpas_atm_threading_init
+         USR            26            16     0.00     0.0           1.63  mpas_atm_dimensions::mpas_atm_set_dims
+         COM            26            16     0.00     0.0         110.46  atm_core::atm_build_halo_groups
+         USR            26            16     0.00     0.0           2.67  mpas_halo::mpas_halo_init
+         COM            26            16     0.00     0.0          78.33  mpas_io_streams::mpas_seekstream
+         COM            26            16     0.15     0.0        9230.79  mpas_io_streams::mpas_readstream
+         COM            26            16     0.01     0.0         627.74  mpas_stream_manager::exch_all_halos
+         COM            26            16     5.81     0.0      363359.04  mpas_stream_manager::postread_reindex
+         COM            26            16     0.00     0.0         135.28  mpas_pool_routines::mpas_pool_initialize_time_levels
+         COM            26            16     0.00     0.0          22.33  atm_core::mpas_atm_run_compatibility
+         COM            26            16     0.00     0.0          29.03  mpas_atmphys_control::physics_compatibility_check
+         COM            26            16     0.00     0.0          20.92  mpas_atm_boundaries::mpas_atm_bdy_checks
+         COM            26            16     0.00     0.0           3.93  mpas_dmpar::mpas_dmpar_max_int
+         COM            26            16     0.00     0.0           7.20  atm_time_integration::mpas_atm_dynamics_checks
+         COM            26            16     0.00     0.0         275.48  atm_core::atm_mpas_init_block
+         USR            26            16     0.09     0.0        5913.76  atm_core::atm_compute_signs
+         USR            26            16     0.04     0.0        2200.20  atm_core::atm_adv_coef_compression
+         USR            26            16     0.02     0.0        1202.16  atm_core::atm_couple_coef_3rd_order
+         COM            26            16     0.47     0.0       29681.21  atm_time_integration::atm_init_coupled_diagnostics
+         USR            26            16     0.00     0.0          14.91  mpas_rbf_interpolation::mpas_rbf_interp_initialize
+         USR            26            16     0.35     0.0       21869.02  mpas_vector_operations::mpas_initialize_vectors
+         USR            26            16     0.06     0.0        3449.97  mpas_vector_reconstruction::mpas_init_reconstruct
+         USR            26            16     0.00     0.0           5.97  mpas_atmphys_control::physics_tables_init
+         USR            26            16     0.00     0.0          13.47  mpas_atmphys_control::physics_registry_init
+         COM            26            16     0.00     0.0          91.54  mpas_atmphys_manager::physics_run_init
+         COM            26            16     0.01     0.0         506.99  mpas_atmphys_init::physics_init
+         USR            26            16     0.10     0.0        6313.56  mpas_atmphys_init::init_dirs_forphys
+         USR            26            16     2.75     0.0      171750.76  mpas_atmphys_o3climatology::init_o3climatology
+         COM            26            16     0.03     0.0        2154.81  mpas_atmphys_landuse::landuse_init_formpas
+         USR            26            16     0.00     0.0          10.98  mpas_atmphys_driver_convection::init_convection
+         USR            26            16     0.00     0.0          13.87  mpas_atmphys_driver_microphysics::microphysics_init
+         USR            26            16     0.01     0.0         447.05  mp_wsm6::mp_wsm6_init
+         USR            26            16     0.00     0.0          61.74  mp_radar::radar_init
+         USR            26            16     0.00     0.0           1.50  mp_radar::m_complex_water_ray
+         USR            26            16     0.00     0.0           1.35  mp_radar::m_complex_ice_maetzler
+         USR            26            16     0.00     0.0          14.63  mpas_atmphys_driver_sfclayer::init_sfclayer
+         USR            26            16     0.00     0.0         146.33  module_sf_sfclay::sfclayinit
+         COM            26            16     0.00     0.0          10.76  mpas_atmphys_driver_lsm::init_lsm
+         COM            26            16     0.00     0.0           8.98  mpas_atmphys_lsm_noahinit::noah_init_formpas
+         COM            26            16     0.03     0.0        1679.68  mpas_atmphys_lsm_noahinit::lsminit
+         COM            26            16     0.16     0.0       10195.43  mpas_atmphys_lsm_noahinit::soil_veg_gen_parm
+         COM            26            16     0.00     0.0          11.03  mpas_atmphys_driver_radiation_sw::init_radiation_sw
+         COM            26            16     0.00     0.0          56.18  mpas_atmphys_rrtmg_swinit::rrtmg_initsw_formpas
+         COM            26            16     0.01     0.0         425.73  mpas_atmphys_rrtmg_swinit::rrtmg_swlookuptable
+         COM            26            16     0.08     0.0        4760.82  mpas_atmphys_rrtmg_swinit::sw_kgb16
+         COM            26            16     0.00     0.0          44.61  mpas_atmphys_rrtmg_swinit::sw_kgb17
+         COM            26            16     0.00     0.0          22.39  mpas_atmphys_rrtmg_swinit::sw_kgb18
+         COM            26            16     0.00     0.0          23.76  mpas_atmphys_rrtmg_swinit::sw_kgb19
+         COM            26            16     0.00     0.0          15.71  mpas_atmphys_rrtmg_swinit::sw_kgb20
+         COM            26            16     0.00     0.0          35.64  mpas_atmphys_rrtmg_swinit::sw_kgb21
+         COM            26            16     0.00     0.0          22.57  mpas_atmphys_rrtmg_swinit::sw_kgb22
+         COM            26            16     0.00     0.0          10.78  mpas_atmphys_rrtmg_swinit::sw_kgb23
+         COM            26            16     0.00     0.0          21.62  mpas_atmphys_rrtmg_swinit::sw_kgb24
+         COM            26            16     0.00     0.0           9.31  mpas_atmphys_rrtmg_swinit::sw_kgb25
+         COM            26            16     0.00     0.0           3.76  mpas_atmphys_rrtmg_swinit::sw_kgb26
+         COM            26            16     0.00     0.0          11.94  mpas_atmphys_rrtmg_swinit::sw_kgb27
+         COM            26            16     0.00     0.0          25.17  mpas_atmphys_rrtmg_swinit::sw_kgb28
+         COM            26            16     0.00     0.0          14.95  mpas_atmphys_rrtmg_swinit::sw_kgb29
+         USR            26            16     0.01     0.0         378.30  rrtmg_sw_init::rrtmg_sw_ini
+         USR            26            16     0.00     0.0           4.79  rrtmg_sw_init::swdatinit
+         USR            26            16     0.00     0.0           1.70  rrtmg_sw_init::swcmbdat
+         USR            26            16     0.00     0.0           6.82  rrtmg_sw_init::swaerpr
+         USR            26            16     0.00     0.0          76.18  rrtmg_sw_init::swcldpr
+         USR            26            16     0.00     0.0           1.70  rrtmg_sw_setcoef::swatmref
+         USR            26            16     0.00     0.0          33.94  rrtmg_sw_init::cmbgb16s
+         USR            26            16     0.00     0.0         101.96  rrtmg_sw_init::cmbgb17
+         USR            26            16     0.00     0.0          36.50  rrtmg_sw_init::cmbgb18
+         USR            26            16     0.00     0.0          36.86  rrtmg_sw_init::cmbgb19
+         USR            26            16     0.00     0.0          13.74  rrtmg_sw_init::cmbgb20
+         USR            26            16     0.00     0.0          79.18  rrtmg_sw_init::cmbgb21
+         USR            26            16     0.00     0.0          18.31  rrtmg_sw_init::cmbgb22
+         USR            26            16     0.00     0.0           6.95  rrtmg_sw_init::cmbgb23
+         USR            26            16     0.00     0.0          45.35  rrtmg_sw_init::cmbgb24
+         USR            26            16     0.00     0.0           3.32  rrtmg_sw_init::cmbgb25
+         USR            26            16     0.00     0.0           1.61  rrtmg_sw_init::cmbgb26
+         USR            26            16     0.00     0.0          13.43  rrtmg_sw_init::cmbgb27
+         USR            26            16     0.00     0.0          60.40  rrtmg_sw_init::cmbgb28
+         USR            26            16     0.00     0.0          14.68  rrtmg_sw_init::cmbgb29
+         COM            26            16     0.00     0.0           9.96  mpas_atmphys_driver_radiation_lw::init_radiation_lw
+         COM            26            16     0.00     0.0          69.91  mpas_atmphys_rrtmg_lwinit::rrtmg_initlw_formpas
+         COM            26            16     0.01     0.0         532.15  mpas_atmphys_rrtmg_lwinit::rrtmg_lwlookuptable
+         COM            26            16     0.10     0.0        6512.29  mpas_atmphys_rrtmg_lwinit::lw_kgb01
+         COM            26            16     0.00     0.0          16.50  mpas_atmphys_rrtmg_lwinit::lw_kgb02
+         COM            26            16     0.00     0.0          51.56  mpas_atmphys_rrtmg_lwinit::lw_kgb03
+         COM            26            16     0.00     0.0          41.12  mpas_atmphys_rrtmg_lwinit::lw_kgb04
+         COM            26            16     0.00     0.0          41.83  mpas_atmphys_rrtmg_lwinit::lw_kgb05
+         COM            26            16     0.00     0.0          11.33  mpas_atmphys_rrtmg_lwinit::lw_kgb06
+         COM            26            16     0.00     0.0          24.32  mpas_atmphys_rrtmg_lwinit::lw_kgb07
+         COM            26            16     0.00     0.0          23.55  mpas_atmphys_rrtmg_lwinit::lw_kgb08
+         COM            26            16     0.00     0.0          22.74  mpas_atmphys_rrtmg_lwinit::lw_kgb09
+         COM            26            16     0.00     0.0          12.68  mpas_atmphys_rrtmg_lwinit::lw_kgb10
+         COM            26            16     0.00     0.0          13.87  mpas_atmphys_rrtmg_lwinit::lw_kgb11
+         COM            26            16     0.00     0.0          12.93  mpas_atmphys_rrtmg_lwinit::lw_kgb12
+         COM            26            16     0.00     0.0          27.49  mpas_atmphys_rrtmg_lwinit::lw_kgb13
+         COM            26            16     0.00     0.0          12.00  mpas_atmphys_rrtmg_lwinit::lw_kgb14
+         COM            26            16     0.00     0.0          13.52  mpas_atmphys_rrtmg_lwinit::lw_kgb15
+         COM            26            16     0.00     0.0          15.46  mpas_atmphys_rrtmg_lwinit::lw_kgb16
+         USR            26            16     0.01     0.0         413.25  rrtmg_lw_init::rrtmg_lw_ini
+         USR            26            16     0.00     0.0          14.89  rrtmg_lw_init::lwdatinit
+         USR            26            16     0.00     0.0           1.75  rrtmg_lw_init::lwcmbdat
+         USR            26            16     0.00     0.0          33.37  rrtmg_lw_init::lwcldpr
+         USR            26            16     0.00     0.0           5.59  rrtmg_lw_setcoef::lwatmref
+         USR            26            16     0.00     0.0          15.83  rrtmg_lw_setcoef::lwavplank
+         USR            26            16     0.00     0.0          26.25  rrtmg_lw_init::cmbgb1
+         USR            26            16     0.00     0.0          20.49  rrtmg_lw_init::cmbgb2
+         USR            26            16     0.00     0.0         159.19  rrtmg_lw_init::cmbgb3
+         USR            26            16     0.00     0.0         107.45  rrtmg_lw_init::cmbgb4
+         USR            26            16     0.00     0.0         125.09  rrtmg_lw_init::cmbgb5
+         USR            26            16     0.00     0.0           6.59  rrtmg_lw_init::cmbgb6
+         USR            26            16     0.00     0.0          67.43  rrtmg_lw_init::cmbgb7
+         USR            26            16     0.00     0.0          26.78  rrtmg_lw_init::cmbgb8
+         USR            26            16     0.00     0.0          59.47  rrtmg_lw_init::cmbgb9
+         USR            26            16     0.00     0.0          10.15  rrtmg_lw_init::cmbgb10
+         USR            26            16     0.00     0.0          15.44  rrtmg_lw_init::cmbgb11
+         USR            26            16     0.00     0.0          24.02  rrtmg_lw_init::cmbgb12
+         USR            26            16     0.00     0.0          23.54  rrtmg_lw_init::cmbgb13
+         USR            26            16     0.00     0.0          11.48  rrtmg_lw_init::cmbgb14
+         USR            26            16     0.00     0.0          15.04  rrtmg_lw_init::cmbgb15
+         USR            26            16     0.00     0.0          16.52  rrtmg_lw_init::cmbgb16
+         USR            26            16     0.00     0.0         281.40  atm_core::atm_compute_mesh_scaling
+         USR            26            16     0.01     0.0         732.07  atm_core::atm_compute_damping_coefs
+         USR            26            16     0.00     0.0          49.23  mpas_atm_boundaries::mpas_atm_setup_bdy_masks
+         COM            26            16     0.00     0.0          60.86  mpas_atm_diagnostics_manager::mpas_atm_diag_setup
+         USR            26            16     0.00     0.0           3.48  mpas_atm_diagnostics_utils::mpas_atm_diag_utils_init
+         USR            26            16     0.00     0.0           3.33  mpas_diagnostic_template::diagnostic_template_setup
+         USR            26            16     0.00     0.0           4.58  mpas_isobaric_diagnostics::isobaric_diagnostics_setup
+         USR            26            16     0.00     0.0           4.96  mpas_cloud_diagnostics::cloud_diagnostics_setup
+         COM            26            16     0.00     0.0          13.17  mpas_convective_diagnostics::convective_diagnostics_setup
+         USR            26            16     0.00     0.0           6.98  mpas_pv_diagnostics::pv_diagnostics_setup
+         USR            26            16     0.00     0.0          12.05  mpas_soundings::soundings_setup
+         USR            26            16     0.00     0.0           2.22  atm_time_integration::mpas_atm_dynamics_init
+         COM            26            16     0.03     0.0        1895.11  atm_core::atm_core_run
+         USR            26            16     0.00     0.0          35.18  mpas_atmphys_update_surface::physics_update_surface
+         USR            26            16     0.00     0.0          14.08  mpas_atmphys_date_time::monthly_min_max
+         COM            26            16     0.00     0.0          54.71  atm_core::atm_core_finalize
+         USR            26            16     0.00     0.0           1.46  atm_time_integration::mpas_atm_dynamics_finalize
+         USR            26            16     0.00     0.0          20.04  mpas_atm_diagnostics_manager::mpas_atm_diag_cleanup
+         USR            26            16     0.00     0.0           1.41  mpas_diagnostic_template::diagnostic_template_cleanup
+         USR            26            16     0.00     0.0           1.54  mpas_soundings::soundings_cleanup
+         USR            26            16     0.00     0.0           1.42  mpas_atm_diagnostics_utils::mpas_atm_diag_utils_finalize
+         COM            26            16     0.00     0.0          11.10  mpas_timekeeping::mpas_destroy_clock
+         USR            26            16     0.00     0.0           1.90  esmf_clockmod::esmf_clockdestroy
+         USR            26            16     0.00     0.0           2.16  mpas_decomp::mpas_decomp_destroy_decomp_list
+         USR            26            16     0.00     0.0           3.69  mpas_atmphys_finalize::atmphys_finalize
+         USR            26            16     0.00     0.0          34.83  atm_core::atm_destroy_halo_groups
+         USR            26            16     0.00     0.0           2.68  mpas_halo::mpas_halo_finalize
+         USR            26            16     0.00     0.0          21.21  mpas_atm_threading::mpas_atm_threading_finalize
+         COM            26            16     0.00     0.0          24.38  mpas_timer::mpas_timer_write_header
+         COM            26            16     0.01     0.0         388.86  mpas_timer::mpas_timer_write
+         USR            26            16     0.00     0.0           7.51  mpas_timer::mpas_timer_finalize
+         COM            26            16     0.00     0.0          20.30  mpas_stream_manager::mpas_stream_mgr_finalize
+         COM            26            16     0.00     0.0         118.59  mpas_log::mpas_log_finalize
+         COM            26            16     0.00     0.0          40.64  mpas_framework::mpas_framework_finalize
+         COM            26            16     0.00     0.0          18.89  mpas_io::mpas_io_finalize
+         USR            26            16     0.00     0.0          10.79  mpas_domain_routines::mpas_deallocate_domain
+         USR            26            16     0.00     0.0           5.07  mpas_domain_routines::mpas_deallocate_block
+         USR            26            16     0.00     0.0           4.01  mpas_field_routines::mpas_deallocate_field0d_char
+         COM            26            16     0.00     0.0          12.71  mpas_dmpar::mpas_dmpar_finalize
+         USR            26            16     0.00     0.0           1.85  mpas_block_decomp::mpas_finish_block_proc_list
+         USR            26            16     0.00     0.0           8.59  mpas_timekeeping::mpas_timekeeping_finalize
+         USR            26            16     0.00     0.0           2.07  esmf_stubs::esmf_finalize
