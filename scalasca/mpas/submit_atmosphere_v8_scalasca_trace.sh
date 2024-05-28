@@ -37,7 +37,7 @@ export SCOREP_ENABLE_TRACING=true
 export SCOREP_FILTERING_FILE=./scorep.filt
 export SCOREP_METRIC_PAPI='PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_RES_STL'
 
-scalasca -analyze -t \
+scalasca -analyze -t -s \
 mpirun -n $SLURM_NTASKS ./${executable}
 
 cp slurm-${SLURM_JOBID}.out ${resultdir}/
@@ -47,4 +47,7 @@ mv diag.* ${resultdir}/
 scorepdirorig="scorep_${executable}_${SLURM_NTASKS}x${SLURM_CPUS_PER_TASK}_trace"
 mv ${scorepdirorig} ${resultdir}/
 scorepdirdest=${resultdir}/${scorepdirorig}
+
+#pós-processamento contendo análise mais detalhada
+scalasca -examine -s ${scorepdirdest}
 
